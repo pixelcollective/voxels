@@ -9,6 +9,4 @@ return array(
     'Wpackio\\Enqueue\\' => array($baseDir . '/includes'),
     'WPackio\\' => array($vendorDir . '/wpackio/enqueue/inc'),
     'TPC\\voxels\\' => array($baseDir . '/includes'),
-    'PostTypes\\PostType\\' => array($baseDir . '/includes'),
-    'PostTypes\\' => array($vendorDir . '/jjgrainger/posttypes/src'),
 );

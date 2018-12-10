@@ -196,7 +196,7 @@ class voxels {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_global = new voxels_Public( $this->get_voxels(), $this->get_version() );
+		$plugin_public = new voxels_Public( $this->get_voxels(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
