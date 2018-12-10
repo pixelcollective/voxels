@@ -2,9 +2,11 @@
 
 "Make blocks," they said. "It'll be fun," they said.
 
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/pixelcollective/voxels.svg?columns=all)](https://waffle.io/pixelcollective/voxels)
+[![buddy pipeline](https://app.buddy.works/kellymears/voxels/pipelines/pipeline/163791/badge.svg?token=cf2f71b8ebfcd126c19a30872316d61faefcc66df3489814198c6180b7cca03d "buddy pipeline")](https://app.buddy.works/kellymears/voxels/pipelines/pipeline/163791)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9673e9cf624049c4afb2a9c6d413f550)](https://www.codacy.com/app/pixelcollective/voxels?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=pixelcollective/voxels&amp;utm_campaign=Badge_Grade)
+
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/pixelcollective/voxels.svg?columns=all)](https://waffle.io/pixelcollective/voxels)
 
 ## Install
 
