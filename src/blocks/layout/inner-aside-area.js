@@ -11,10 +11,12 @@ import {
 export const edit = () => {
 
   const ALLOWED_BLOCKS = ['voxels/card', 'voxels/polaroid', 'core/image'];
+  const TEMPLATE = [[ 'voxels/card' ]];
+  const TEMPLATE_LOCK = false;
 
   return (
     <div className={'wp-block-voxels-aside-area voxels__aside-area'}>
-      <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
+      <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} template={TEMPLATE} templateLock={ TEMPLATE_LOCK } />
     </div>
   );
 }

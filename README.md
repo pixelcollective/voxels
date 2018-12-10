@@ -22,7 +22,7 @@
 ## Structure
 
 ```(txt)
-/voxels   # → Root of your Sage based theme
+/voxels                   # → Root of plugin
 ├── assets/               # → Packed JS/CSS
 ├── includes/             # → PHP Classes, etc.
 ├── languages/            # → i18n
@@ -40,7 +40,7 @@
 │   │   ├── icons.js      # → svg icons
 │   │   ├── public.js     # → JS Entrypoint for public
 │   │   ├── public.scss   # → SCSS Main for public
-│   │   └─── wp_imports.js # → WordPress API wrapper
+│   │   └───wp_imports.js # → WordPress API wrapper
 │   └── client/           # → Public scripts (load React on frontend, etc.)
 ├── vendor/               # → Composer packages (never edit)
 ├── composer.json         # → Composer dependencies (never edit)

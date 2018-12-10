@@ -6,19 +6,25 @@ import { registerBlockType, __, InnerBlocks } from "../wp_imports";
 
 export const edit = () => {
   const TEMPLATE = [
-    ["voxels/inner-content-area"],
-    ["voxels/inner-aside-area"]
+      ["voxels/inner-content-area"],
+      ["voxels/inner-aside-area"]
   ];
 
+  const TEMPLATE_LOCK = 'ALL';
+
   return (
-    <div className={"wp-block-voxels-row voxels__row"}>
-      <InnerBlocks template={TEMPLATE} templateLock={ true } />
+    <div className={'wp-block-voxels-row voxels__grid_row'}>
+      <InnerBlocks template={TEMPLATE} templateLock={ TEMPLATE_LOCK } />
     </div>
   );
 };
 
 export const save = () => {
-  return <InnerBlocks.Content />;
+  return (
+    <div className={'wp-block-voxels-row voxels__grid_row'}>
+      <InnerBlocks.Content />
+    </div>
+  );
 };
 
 registerBlockType("voxels/row", {

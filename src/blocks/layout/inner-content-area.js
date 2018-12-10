@@ -11,10 +11,11 @@ import {
 export const edit = () => {
 
   const ALLOWED_BLOCKS = [ 'core/heading', 'core/paragraph', 'core/image', 'voxels/button'];
+  const TEMPLATE = [['core/heading']];
 
   return (
-    <div className={'wp-block-voxels-inner-content-area voxels__inner-content-area'}>
-      <InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } />
+    <div className={'wp-block-voxels-inner-content-area voxels__content-area voxels__column'}>
+      <InnerBlocks allowedBlocks={ ALLOWED_BLOCKS } template={ TEMPLATE } templateLock={ false } />
     </div>
   );
 }

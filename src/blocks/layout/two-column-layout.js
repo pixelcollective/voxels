@@ -14,22 +14,22 @@ import {
 export const edit = () => {
 
   const TEMPLATE = [
-    ["voxels/row"]
+    ['voxels/row']
   ];
 
-  const TEMPLATE_LOCK = 'ALL';
+  const TEMPLATE_LOCK = true;
   const ALLOWED_BLOCKS = ['voxels/row'];
 
   return (
-    <div className={'wp-block-voxels-two-column-layout wp-block voxels__section'} >
-      <InnerBlocks template={ TEMPLATE } allowedBlocks={ALLOWED_BLOCKS} templateLock={ true } />
+    <div className={'wp-block-voxels-two-column-layout'}>
+      <InnerBlocks template={TEMPLATE} allowedBlocks={ALLOWED_BLOCKS} templateLock={ TEMPLATE_LOCK} />
     </div>
   );
 }
 
 export const save = () => {
   return (
-    <div className={'wp-block-voxels-two-column-layout wp-block voxels__two-column-block'} >
+    <div className={'wp-block-voxels-two-column-layout'}>
       <InnerBlocks.Content />
     </div>
   );
