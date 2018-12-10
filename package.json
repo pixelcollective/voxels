@@ -22,8 +22,8 @@
     "start": "wpackio-scripts start",
     "archive": "wpackio-scripts pack",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
-    "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\""
+    "lint:scripts": "eslint src/**/*.{js}",
+    "lint:styles": "stylelint \"src/**/*.{css,sass,scss,sss,less}\""
   },
   "engines": {
     "node": ">=10.13.0"
