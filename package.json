@@ -1,0 +1,43 @@
+{
+  "name": "voxels",
+  "version": "0.0.1",
+  "author": "Tiny Pixel Collective, Kelly Mears <developers@tinypixel.io>",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pixelcollective/voxels.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pixelcollective/voxels/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "scripts": {
+    "bootstrap": "wpackio-scripts bootstrap",
+    "build": "wpackio-scripts build",
+    "start": "wpackio-scripts start",
+    "archive": "wpackio-scripts pack",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
+    "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\""
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "dependencies": {
+    "@wpackio/entrypoint": "^2.0.0",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "@wpackio/scripts": "^2.8.0",
+    "classnames": "^2.2.6",
+    "node-sass": "^4.10.0",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0",
+    "eslint": "^5.10.0"
+  }
+}

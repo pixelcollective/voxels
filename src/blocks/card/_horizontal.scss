@@ -1,0 +1,165 @@
+.voxels-card *,
+.voxels-card-horizontal *,
+.voxels-polaroid *
+p,
+ul li,
+ol li {
+  font-family: $family-sans-serif;
+}
+
+.voxels-card-horizontal-panel {
+  @include voxels-z-depth-1();
+
+  transition: box-shadow .25s;
+  padding: $voxels-card-horizontal-padding;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  border-radius: 2px;
+  background-color: $voxels-card-horizontal-bg-color;
+}
+
+.voxels-card-horizontal {
+  @include voxels-z-depth-1();
+
+  display: flex;
+  position: relative;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  padding-left: 0;
+  background-color: $voxels-card-horizontal-bg-color;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+
+  .voxels-image-upload-has-placeholder,
+  .voxels-card-horizontal-image {
+      min-height: 100%;
+      max-height: none;
+      background-size: cover;
+      overflow: visible;
+      display: flex;
+      background-repeat: no-repeat;
+      background-position: center center;
+  }
+  .voxels-card-horizontal-image + .voxels-card-horizontal-content {
+    max-height: 40%;
+  }
+  .voxels-card-horizontal-content {
+    max-height: 100%;
+    overflow: hidden;
+  }
+  .voxels-card-horizontal-action {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .voxels-card-horizontal-image {
+    min-height: 100%;
+      max-height: none;
+      background-size: cover;
+      overflow: visible;
+      min-width: 35%;
+      background-repeat: no-repeat;
+      background-position: center center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .voxels-card-horizontal-stacked {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+
+    .voxels-card-horizontal-content {
+      flex-grow: 1;
+    }
+  }
+
+  &.sticky-action {
+    .voxels-card-horizontal-action {
+      z-index: 2;
+    }
+
+    .voxels-card-horizontal-reveal {
+      z-index: 1;
+      padding-bottom: 64px;
+    }
+  }
+
+  .voxels-card-horizontal-image {
+    .voxels-card-horizontal-title {
+      color: $voxels-card-horizontal-bg-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      padding: $voxels-card-horizontal-padding;
+    }
+  }
+
+  .voxels-card-horizontal-content {
+    padding: $voxels-card-horizontal-padding;
+    border-radius: 0 0 2px 2px;
+
+    p {
+      margin: 0;
+    }
+
+    .voxels-card-horizontal-title {
+      display: block;
+      line-height: 32px;
+      margin-bottom: 8px;
+
+      i {
+        line-height: 32px;
+      }
+    }
+  }
+
+  .voxels-card-horizontal-action {
+    background-color: inherit; // Use inherit to inherit color classes
+    border-top: 1px solid rgba(160,160,160,.2);
+    position: relative;
+    padding: 16px $voxels-card-horizontal-padding;
+
+    a:not(.btn):not(.btn-large):not(.btn-floating) {
+      color: $voxels-card-horizontal-link-color;
+      margin-right: $voxels-card-horizontal-padding;
+      transition: color .3s ease;
+
+      &:hover {
+        color: $voxels-card-horizontal-link-color-light;
+      }
+    }
+
+    .voxels-button {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .voxels-card-horizontal-reveal {
+    padding: $voxels-card-horizontal-padding;
+    position: absolute;
+    background-color: $voxels-card-horizontal-bg-color;
+    width: 100%;
+    overflow-y: auto;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+
+    .voxels-card-horizontal-title {
+      cursor: pointer;
+      display: block;
+    }
+  }
+}
+
+.voxels-card-horizontal-image .voxels-image-upload-remove {
+  position: relative;
+  left: 4px;
+}

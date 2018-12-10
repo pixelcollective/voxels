@@ -1,0 +1,89 @@
+/**
+ * #.# Styles for Button Block.
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+/**
+ * Button link form styles.
+ */
+.voxels-button {
+	@include baseBlock();
+}
+
+.voxels-button {
+	@include baseButton();
+
+	border: none;
+	border-radius: 4px;
+	box-shadow: none !important;
+	cursor: pointer;
+
+	.voxels-button-inner {
+		font-family: $family-sans-serif;
+		text-decoration: none !important;
+		white-space: nowrap;
+		display: inline-block;
+		color: #fff;
+		box-shadow: none !important;
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+
+	opacity: 1;
+	background: var(--s-primary-color, #2091e1);
+	transition: opacity .2s ease-in-out;
+	box-shadow: none !important;
+	font-size: 1em;
+
+	&:hover {
+		opacity: .85;
+		box-shadow: none !important;
+	}
+}
+.voxels-button .voxels-button-inner:hover {
+	color: white;
+}
+
+
+.voxels-button-small.voxels-button .voxels-button-inner {
+	font-size: .75em;
+}
+
+.voxels-button-medium.voxels-button {
+	padding-left: 1.25em;
+	padding-right: 1.25em;
+
+	.voxels-button-inner {
+		font-size: 1.25em;
+	}
+}
+
+.voxels-button-large.voxels-button {
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+
+	.voxels-button-inner {
+		font-size: 1.5em;
+	}
+}
+.voxels-button-left {
+	margin-right: auto;
+	display: table;
+}
+
+.voxels-button-center {
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+}
+
+.voxels-button-right {
+	margin-left: auto;
+	display: table;
+}
+
+.voxels-button-full {
+	display: block;
+	text-align: center;
+}

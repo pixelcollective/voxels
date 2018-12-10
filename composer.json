@@ -1,0 +1,29 @@
+{
+  "name": "tiny-pixel/voxels",
+  "type": "wordpress-plugin",
+  "version": "0.0.1",
+  "description": "WordPress 5 editor components",
+  "keywords": [
+    "wordpress",
+    "gutenberg"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kelly Mears",
+      "email": "developers@tinypixel.io",
+      "homepage": "https://tinypixel.io"
+    }
+  ],
+  "homepage": "https://github.com/pixelcollective/voxels",
+  "require": {
+    "php": ">=5.3.2",
+    "wpackio/enqueue": "^1.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "TPC\\voxels\\": "includes/",
+      "Wpackio\\Enqueue\\": "includes/"
+    }
+  }
+}

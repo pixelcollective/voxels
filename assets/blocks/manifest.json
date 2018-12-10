@@ -1,0 +1,46 @@
+{
+  "editor.css": "blocks/editor-9ec52aa4.css",
+  "editor.css.map": "blocks/editor-9ec52aa4.css.map",
+  "editor.js": "blocks/editor-d1609864.js",
+  "editor.js.map": "blocks/editor-d1609864.js.map",
+  "public.css": "blocks/public-0b42cb00.css",
+  "public.css.map": "blocks/public-0b42cb00.css.map",
+  "public.js": "blocks/public-ed5a1115.js",
+  "public.js.map": "blocks/public-ed5a1115.js.map",
+  "runtime.js": "blocks/runtime-0a30aae5.js",
+  "runtime.js.map": "blocks/runtime-0a30aae5.js.map",
+  "wpackioEp": {
+    "editor": {
+      "js": [
+        "blocks/runtime-0a30aae5.js",
+        "blocks/editor-d1609864.js"
+      ],
+      "js.map": [
+        "blocks/runtime-0a30aae5.js.map",
+        "blocks/editor-d1609864.js.map"
+      ],
+      "css": [
+        "blocks/editor-9ec52aa4.css"
+      ],
+      "css.map": [
+        "blocks/editor-9ec52aa4.css.map"
+      ]
+    },
+    "public": {
+      "js": [
+        "blocks/runtime-0a30aae5.js",
+        "blocks/public-ed5a1115.js"
+      ],
+      "js.map": [
+        "blocks/runtime-0a30aae5.js.map",
+        "blocks/public-ed5a1115.js.map"
+      ],
+      "css": [
+        "blocks/public-0b42cb00.css"
+      ],
+      "css.map": [
+        "blocks/public-0b42cb00.css.map"
+      ]
+    }
+  }
+}
