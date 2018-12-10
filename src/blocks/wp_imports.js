@@ -1,3 +1,5 @@
+import lodash from 'lodash'
+
 export const { registerBlockType } = wp.blocks
 
 export const { __ } = wp.i18n

@@ -15,7 +15,6 @@
     max-height: 50px;
     fill: #ddd;
     max-width: 40%;
-    width: 100%;
   }
 
   &:hover {
@@ -25,7 +24,7 @@
 
 .voxels-image-upload-has-image {
   &:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
@@ -41,7 +40,7 @@
   z-index: 9 !important;
 
   svg {
-    stroke: rgba(0,0,0,0.3);
+    stroke: rgba(0, 0, 0, 0.3);
     stroke-width: 1px;
     fill: #fff;
     max-width: none;
@@ -49,9 +48,10 @@
 }
 
 .editor-block-list__block {
-    &.is-selected, &.is-hovered {
-        .voxels-image-upload-remove {
-            display: block;
-        }
+  &.is-selected,
+  &.is-hovered {
+    .voxels-image-upload-remove {
+      display: block;
     }
+  }
 }

@@ -10,9 +10,9 @@
   background-size: cover;
   background-position: center;
 
-  &:before {
+  &::before {
     display: block !important;
-    content: '';
+    content: "";
     position: absolute;
     z-index: 1;
     top: 0;
@@ -35,7 +35,7 @@
 }
 
 @for $i from 0 through 10 {
-  .voxels-has-background-opacity-#{ $i }:before {
+  .voxels-has-background-opacity-#{ $i }::before {
     opacity: $i * 0.1;
   }
 }

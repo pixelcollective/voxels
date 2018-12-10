@@ -3,9 +3,19 @@
  *
  * CSS for both Frontend+Backend.
  */
+
+.voxels-card *,
+.voxels-horizontal-card *,
+.voxels-polaroid * p,
+ul li,
+ol li {
+  font-family: $family-sans-serif;
+}
+
 .voxels-card {
   @include baseBlock();
   @include box();
+
   border-radius: 4px;
   margin: 30px 0;
 
@@ -15,7 +25,7 @@
     background-position: center;
     border-top-right-radius: $box-radius;
     border-top-left-radius: $box-radius;
-    padding-top: 0px;
+    padding-top: 0;
     margin: calc(var(--box-padding-vert) * -1) calc(var(--box-padding-hori) * -1) var(--box-padding-vert) !important;
     width: calc(100% + var(--box-padding-hori) * 2);
 
@@ -24,13 +34,4 @@
       padding-top: 0 !important;
     }
   }
-}
-
-.voxels-card *,
-.voxels-horizontal-card *,
-.voxels-polaroid *
-p,
-ul li,
-ol li {
-  font-family: $family-sans-serif;
 }

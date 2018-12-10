@@ -1,7 +1,6 @@
 .voxels-card *,
 .voxels-card-horizontal *,
-.voxels-polaroid *
-p,
+.voxels-polaroid * p,
 ul li,
 ol li {
   font-family: $family-sans-serif;
@@ -10,7 +9,7 @@ ol li {
 .voxels-card-horizontal-panel {
   @include voxels-z-depth-1();
 
-  transition: box-shadow .25s;
+  transition: box-shadow 0.25s;
   padding: $voxels-card-horizontal-padding;
   margin: $element-top-margin 0 $element-bottom-margin 0;
   border-radius: 2px;
@@ -25,79 +24,10 @@ ol li {
   margin: $element-top-margin 0 $element-bottom-margin 0;
   padding-left: 0;
   background-color: $voxels-card-horizontal-bg-color;
-  transition: box-shadow .25s;
+  transition: box-shadow 0.25s;
   border-radius: 2px;
-
-  .voxels-image-upload-has-placeholder,
-  .voxels-card-horizontal-image {
-      min-height: 100%;
-      max-height: none;
-      background-size: cover;
-      overflow: visible;
-      display: flex;
-      background-repeat: no-repeat;
-      background-position: center center;
-  }
-  .voxels-card-horizontal-image + .voxels-card-horizontal-content {
-    max-height: 40%;
-  }
-  .voxels-card-horizontal-content {
-    max-height: 100%;
-    overflow: hidden;
-  }
-  .voxels-card-horizontal-action {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .voxels-card-horizontal-image {
-    min-height: 100%;
-      max-height: none;
-      background-size: cover;
-      overflow: visible;
-      min-width: 35%;
-      background-repeat: no-repeat;
-      background-position: center center;
-
-    img {
-      height: 100%;
-    }
-  }
-
-  .voxels-card-horizontal-stacked {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    position: relative;
-
-    .voxels-card-horizontal-content {
-      flex-grow: 1;
-    }
-  }
-
-  &.sticky-action {
-    .voxels-card-horizontal-action {
-      z-index: 2;
-    }
-
-    .voxels-card-horizontal-reveal {
-      z-index: 1;
-      padding-bottom: 64px;
-    }
-  }
-
-  .voxels-card-horizontal-image {
-    .voxels-card-horizontal-title {
-      color: $voxels-card-horizontal-bg-color;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      max-width: 100%;
-      padding: $voxels-card-horizontal-padding;
-    }
-  }
+  max-height: 100%;
+  overflow: hidden;
 
   .voxels-card-horizontal-content {
     padding: $voxels-card-horizontal-padding;
@@ -118,16 +48,30 @@ ol li {
     }
   }
 
+  .voxels-image-upload-has-placeholder,
+  .voxels-card-horizontal-image {
+    min-height: 100%;
+    max-height: none;
+    background-size: cover;
+    overflow: visible;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .voxels-card-horizontal-image + .voxels-card-horizontal-content {
+    max-height: 40%;
+  }
+
   .voxels-card-horizontal-action {
     background-color: inherit; // Use inherit to inherit color classes
-    border-top: 1px solid rgba(160,160,160,.2);
-    position: relative;
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 16px $voxels-card-horizontal-padding;
 
     a:not(.btn):not(.btn-large):not(.btn-floating) {
       color: $voxels-card-horizontal-link-color;
       margin-right: $voxels-card-horizontal-padding;
-      transition: color .3s ease;
+      transition: color 0.3s ease;
 
       &:hover {
         color: $voxels-card-horizontal-link-color-light;
@@ -155,6 +99,51 @@ ol li {
     .voxels-card-horizontal-title {
       cursor: pointer;
       display: block;
+    }
+  }
+
+  .voxels-card-horizontal-image {
+    min-height: 100%;
+    max-height: none;
+    background-size: cover;
+    overflow: visible;
+    min-width: 35%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .voxels-card-horizontal-title {
+      color: $voxels-card-horizontal-bg-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      padding: $voxels-card-horizontal-padding;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .voxels-card-horizontal-stacked {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+
+    .voxels-card-horizontal-content {
+      flex-grow: 1;
+    }
+  }
+
+  &.sticky-action {
+    .voxels-card-horizontal-action {
+      z-index: 2;
+    }
+
+    .voxels-card-horizontal-reveal {
+      z-index: 1;
+      padding-bottom: 64px;
     }
   }
 }

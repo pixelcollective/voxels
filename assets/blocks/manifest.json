@@ -2,12 +2,14 @@
   "editor.js": "blocks/editor.js",
   "public.js": "blocks/public.js",
   "runtime.js": "blocks/runtime.js",
+  "vendors~editor.js": "blocks/vendors~editor.js",
   "vendors~editor~public.js": "blocks/vendors~editor~public.js",
   "wpackioEp": {
     "editor": {
       "js": [
         "blocks/runtime.js",
         "blocks/vendors~editor~public.js",
+        "blocks/vendors~editor.js",
         "blocks/editor.js"
       ]
     },
