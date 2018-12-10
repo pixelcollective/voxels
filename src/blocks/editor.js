@@ -7,3 +7,9 @@ import './header/header';
 import './card/card';
 import './card/polaroid';
 import './card/horizontal';
+
+/** layout */
+import './layout/row';
+import './layout/two-column-layout';
+import './layout/inner-content-area';
+import './layout/inner-aside-area';

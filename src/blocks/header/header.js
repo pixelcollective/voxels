@@ -2,7 +2,6 @@
  * BLOCK: header block
  *
  */
-
 import { BrowserLayoutIcon } from './../icons'
 import ButtonEdit from './../button/button-edit'
 import ButtonSave from './../button/button-save'

@@ -114,7 +114,7 @@ export const edit = (props) => {
           onChange={(text) => setAttributes({ heading: text })}
           style={{
             color: headingColor,
-            textAlign: contentAlign
+            textAlign: contentAlign,
           }}
           keepPlaceholderOnFocus
         />
@@ -125,7 +125,7 @@ export const edit = (props) => {
           onChange={(text) => setAttributes({ tagline: text })}
           style={{
             color: taglineColor,
-            textAlign: contentAlign
+            textAlign: contentAlign,
           }}
           keepPlaceholderOnFocus
         />
@@ -136,7 +136,7 @@ export const edit = (props) => {
           onChange={(text) => setAttributes({ des: text })}
           style={{
             color: desColor,
-            textAlign: contentAlign
+            textAlign: contentAlign,
           }}
           keepPlaceholderOnFocus
         />
@@ -147,7 +147,7 @@ export const edit = (props) => {
         <form
           onSubmit={(event) => event.preventDefault()}
           className={`blocks-button__inline-link voxels-button-${contentAlign}`}
-          style={{ marginTop: 10 }}
+          style={{ marginTop: 10, }}
         >
           <Fragment>
           <Dashicon icon={'admin-links'} />
@@ -197,7 +197,7 @@ export const save = (props) => {
       {!RichText.isEmpty(heading) && (
         <RichText.Content
           tagName="h4"
-          style={{ color: headingColor, textAlign: contentAlign }}
+          style={{ color: headingColor, textAlign: contentAlign, }}
           value={heading}
         />
       )}
@@ -205,7 +205,7 @@ export const save = (props) => {
         <RichText.Content
           tagName="p"
           className='voxels-tagline'
-          style={{ color: taglineColor, textAlign: contentAlign }}
+          style={{ color: taglineColor, textAlign: contentAlign, }}
           value={tagline}
         />
       )}

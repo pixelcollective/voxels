@@ -69,30 +69,7 @@ class voxels_Global
 					'align' => 'full'
 				)
 			),
-			array( 'core/columns',
-				array( 'align' => 'full' ),
-				array(
-					array( 'core/column', array(),
-						array(
-							array( 'core/heading', array(
-								'placeholder' => 'Hello, world.',
-							) ),
-							array( 'core/image', array(
-								'placeholder' => 'Hello, world.',
-							) ),
-							array( 'core/paragraph', array(
-								'placeholder' => 'Lorem ipsum dolor si...',
-							) ),
-						),
-					),
-					array( 'core/column', array(),
-						array(
-							array( 'voxels/card', array() ),
-							array( 'voxels/card', array() ),
-						),
-					),
-				),
-			),
+			array( 'voxels/two-column-layout', ),
 			array( 'voxels/header',
 				array(
 					'align' => 'full'

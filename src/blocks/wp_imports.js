@@ -1,5 +1,3 @@
-import lodash from 'lodash'
-
 export const { registerBlockType } = wp.blocks
 
 export const { __ } = wp.i18n
@@ -30,11 +28,7 @@ export const {
   MediaUpload,
 } = wp.editor.InspectorControls ? wp.editor : wp.blocks
 
-export const {
-  PanelColorSettings,
-  BlockAlignmentToolbar,
-  InnerBlocks,
-} = wp.editor
+export const { PanelColorSettings, BlockAlignmentToolbar, InnerBlocks } = wp.editor;
 
 export const {
   Fragment,
@@ -44,7 +38,7 @@ export const {
 export const {
   omit,
   merge,
-} = lodash
+} = lodash;
 
 export const {
   doAction,

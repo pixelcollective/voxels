@@ -159,14 +159,12 @@ $box-vert-padding: 60px;
   }
 }
 
-[class*="voxels-"] {
-  ul&:not(.browser-default) {
-    padding-left: 0;
-    list-style-type: none;
+[class*="voxels-"] ul:not(.browser-default) {
+  padding-left: 0;
+  list-style-type: none;
 
-    & > li {
-      list-style-type: none;
-    }
+  & > li {
+    list-style-type: none;
   }
 }
 
