@@ -3,14 +3,14 @@ module.exports = {
   'extends': 'eslint:recommended',
   'globals': {
     'wp': true,
-    },
+  },
   'env': {
     'node': true,
     'es6': true,
     'amd': true,
     'browser': true,
     'jquery': true,
-    },
+  },
   'parserOptions': {
     'ecmaFeatures': {
       'globalReturn': true,
@@ -18,6 +18,7 @@ module.exports = {
       'objectLiteralDuplicateProperties': false,
     },
     'ecmaVersion': 2017,
+    'esversion': 6,
     'sourceType': 'module',
     },
   'plugins': [
