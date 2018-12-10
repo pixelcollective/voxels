@@ -50,4 +50,5 @@ module.exports = {
             },
         ],
     },
+    "react-in-jsx-scope": "off",
 };
