@@ -1,6 +1,9 @@
 module.exports = {
   'root': true,
-  'extends': 'eslint:recommended',
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   'globals': {
     'wp': true,
   },
@@ -16,6 +19,7 @@ module.exports = {
       'globalReturn': true,
       'generators': false,
       'objectLiteralDuplicateProperties': false,
+      'jsx': true,
     },
     'ecmaVersion': 2017,
     'esversion': 6,
