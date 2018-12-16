@@ -14,7 +14,14 @@ import {
 export const edit = () => {
 
   const TEMPLATE = [
-    ['voxels/row']
+    ['core/columns'], {}, [
+      ['core/column'], {}, [
+        ['voxel/inner-content-area'], {}, [],
+      ],
+      ['core/column'], {}, [
+        ['voxel/inner-aside-area'], {}, [],
+      ],
+    ]
   ];
 
   const TEMPLATE_LOCK = true;
