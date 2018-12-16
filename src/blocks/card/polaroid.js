@@ -39,12 +39,10 @@ export const edit = (props) => {
 
   const {
     heading,
-    tagline,
     des,
     mediaID,
     mediaURL,
     headingColor,
-    taglineColor,
     desColor,
     buttonURL,
     buttonText,
@@ -77,11 +75,6 @@ export const edit = (props) => {
               value: headingColor,
               onChange: (colorValue) => setAttributes({ headingColor: colorValue }),
               label: __('Heading Color'),
-            },
-            {
-              value: taglineColor,
-              onChange: (colorValue) => setAttributes({ taglineColor: colorValue }),
-              label: __('Tagline Color'),
             },
             {
               value: desColor,
@@ -120,17 +113,6 @@ export const edit = (props) => {
           onChange={(text) => setAttributes({ heading: text })}
           style={{
             color: headingColor,
-            textAlign: contentAlign
-          }}
-          keepPlaceholderOnFocus
-        />
-        <RichText
-          tagName={'p'}
-          value={tagline}
-          className={'voxels-tagline'}
-          onChange={(text) => setAttributes({ tagline: text })}
-          style={{
-            color: taglineColor,
             textAlign: contentAlign
           }}
           keepPlaceholderOnFocus
@@ -179,12 +161,9 @@ export const save = (props) => {
   const { className } = props
   const {
     heading,
-    tagline,
     des,
     mediaURL,
-    mediaID,
     headingColor,
-    taglineColor,
     desColor,
     buttonURL,
     buttonText,
@@ -211,14 +190,6 @@ export const save = (props) => {
           tagName="h4"
           style={{ color: headingColor, textAlign: contentAlign }}
           value={heading}
-        />
-      )}
-      {!RichText.isEmpty(tagline) && (
-        <RichText.Content
-          tagName="p"
-          className='voxels-tagline'
-          style={{ color: taglineColor, textAlign: contentAlign }}
-          value={tagline}
         />
       )}
       {!RichText.isEmpty(des) && (
@@ -251,20 +222,12 @@ const schema = {
     selector: '.voxels-card h4',
     default: __('Your Headline Here')
   },
-  tagline: {
-    source: 'html',
-    selector: '.voxels-tagline',
-    default: __('This is a supporting tagline')
-  },
   des: {
     source: 'html',
     selector: '.voxels-card-des',
-    default: __('The Headline concept and buttressing tagline are followed by a brief description. Remember to set an image and BAM! You\'ve got yourself a card 👏🏽')
+    default: __('Spectrum designator equarium dignity. Forensia tonne palor, a quastridian nun.')
   },
   headingColor: {
-    type: 'string',
-  },
-  taglineColor: {
     type: 'string',
   },
   desColor: {

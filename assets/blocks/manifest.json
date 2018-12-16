@@ -1,21 +1,45 @@
 {
-  "editor.js": "blocks/editor.js",
-  "public.js": "blocks/public.js",
-  "runtime.js": "blocks/runtime.js",
-  "vendors~editor~public.js": "blocks/vendors~editor~public.js",
+  "editor.css": "blocks/editor-9cbe9e0b.css",
+  "editor.css.map": "blocks/editor-9cbe9e0b.css.map",
+  "editor.js": "blocks/editor-7a0d4922.js",
+  "editor.js.map": "blocks/editor-7a0d4922.js.map",
+  "public.css": "blocks/public-702ed347.css",
+  "public.css.map": "blocks/public-702ed347.css.map",
+  "public.js": "blocks/public-ed5a1115.js",
+  "public.js.map": "blocks/public-ed5a1115.js.map",
+  "runtime.js": "blocks/runtime-0a30aae5.js",
+  "runtime.js.map": "blocks/runtime-0a30aae5.js.map",
   "wpackioEp": {
     "editor": {
       "js": [
-        "blocks/runtime.js",
-        "blocks/vendors~editor~public.js",
-        "blocks/editor.js"
+        "blocks/runtime-0a30aae5.js",
+        "blocks/editor-7a0d4922.js"
+      ],
+      "js.map": [
+        "blocks/runtime-0a30aae5.js.map",
+        "blocks/editor-7a0d4922.js.map"
+      ],
+      "css": [
+        "blocks/editor-9cbe9e0b.css"
+      ],
+      "css.map": [
+        "blocks/editor-9cbe9e0b.css.map"
       ]
     },
     "public": {
       "js": [
-        "blocks/runtime.js",
-        "blocks/vendors~editor~public.js",
-        "blocks/public.js"
+        "blocks/runtime-0a30aae5.js",
+        "blocks/public-ed5a1115.js"
+      ],
+      "js.map": [
+        "blocks/runtime-0a30aae5.js.map",
+        "blocks/public-ed5a1115.js.map"
+      ],
+      "css": [
+        "blocks/public-702ed347.css"
+      ],
+      "css.map": [
+        "blocks/public-702ed347.css.map"
       ]
     }
   }

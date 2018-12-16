@@ -15,18 +15,13 @@ import {
   registerBlockType,
   __,
   PanelColorSettings,
-  Button,
   IconButton,
   Dashicon,
-  SelectControl,
-  RangeControl,
-  Toolbar,
   InspectorControls,
   RichText,
   BlockControls,
   AlignmentToolbar,
   URLInput,
-  PanelBody,
   Fragment,
 } from './../wp_imports'
 
@@ -34,18 +29,14 @@ export const edit = (props) => {
 
   const {
     isSelected,
-    editable,
-    setState,
     className,
     setAttributes
   } = props;
 
   const {
     heading,
-    tagline,
     des,
     headingColor,
-    taglineColor,
     desColor,
     buttonHidden,
     buttonURL,
@@ -80,11 +71,6 @@ export const edit = (props) => {
               label: __('Heading Color'),
             },
             {
-              value: taglineColor,
-              onChange: (colorValue) => setAttributes({ taglineColor: colorValue }),
-              label: __('Tagline Color'),
-            },
-            {
               value: desColor,
               onChange: (colorValue) => setAttributes({ desColor: colorValue }),
               label: __('Description Color'),
@@ -114,17 +100,6 @@ export const edit = (props) => {
           onChange={(text) => setAttributes({ heading: text })}
           style={{
             color: headingColor,
-            textAlign: contentAlign,
-          }}
-          keepPlaceholderOnFocus
-        />
-        <RichText
-          tagName={'p'}
-          value={tagline}
-          className={'voxels-tagline'}
-          onChange={(text) => setAttributes({ tagline: text })}
-          style={{
-            color: taglineColor,
             textAlign: contentAlign,
           }}
           keepPlaceholderOnFocus
@@ -172,10 +147,8 @@ export const save = (props) => {
   const { className } = props
   const {
     heading,
-    tagline,
     des,
     headingColor,
-    taglineColor,
     desColor,
     buttonHidden,
     buttonURL,
@@ -201,14 +174,6 @@ export const save = (props) => {
           value={heading}
         />
       )}
-      {!RichText.isEmpty(tagline) && (
-        <RichText.Content
-          tagName="p"
-          className='voxels-tagline'
-          style={{ color: taglineColor, textAlign: contentAlign, }}
-          value={tagline}
-        />
-      )}
       {!RichText.isEmpty(des) && (
         <RichText.Content
           tagName="p"
@@ -228,20 +193,12 @@ const schema = {
     selector: '.voxels-card h4',
     default: __('Your Headline Here')
   },
-  tagline: {
-    source: 'html',
-    selector: '.voxels-tagline',
-    default: __('This is a supporting tagline')
-  },
   des: {
     source: 'html',
     selector: '.voxels-card-des',
     default: __('The Headline concept and buttressing tagline are followed by a brief description. Remember to set an image and BAM! You\'ve got yourself a card 👏🏽')
   },
   headingColor: {
-    type: 'string',
-  },
-  taglineColor: {
     type: 'string',
   },
   desColor: {

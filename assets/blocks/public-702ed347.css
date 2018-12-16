@@ -1,0 +1,683 @@
+/*!
+ * 
+ * voxels
+ * 
+ * @author Tiny Pixel Collective, Kelly Mears
+ * @version 0.0.1
+ * @link https://tinypixel.io/voxels
+ * @license MIT
+ * 
+ * Copyright (c) 2018 Tiny Pixel Collective, Kelly Mears
+ * 
+ * This software is released under the MIT license. © 2018 Tiny Pixel Colletive, LLC.
+ * 
+ * Compiled with the help of https://wpack.io
+ * A zero setup Webpack Bundler Script for WordPress
+ */
+/**
+ * Materialize.css vars
+ */
+@keyframes bgrad {
+  to {
+    background-position: right, center; } }
+
+/**
+ * #.# Common SCSS
+ *
+ * Common across project.
+ *
+*/
+/**
+ * Z-Levels
+ */
+/* 2dp elevation modified */
+/* 6dp elevation modified */
+/* 12dp elevation modified */
+/* 16dp elevation */
+/* 24dp elevation */
+[data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] {
+  margin-top: -32px; }
+
+.gutenberg .voxels-editor-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Heebo", sans-serif;
+  color: #8e979e;
+  padding: 2em 0 0;
+  background: #fff;
+  border: none;
+  box-shadow: none;
+  white-space: nowrap;
+  display: block; }
+  .gutenberg .voxels-editor-label:first-child {
+    padding-top: 0; }
+
+[class*="voxels-"] ul:not(.browser-default) {
+  padding-left: 0;
+  list-style-type: none; }
+  [class*="voxels-"] ul:not(.browser-default) > li {
+    list-style-type: none; }
+
+[class*="voxels-"] form[class*="-link"],
+form[class*="voxels-"][class*="-link"],
+[class*="voxels-"] + form[class*="-link"],
+[data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 2dp elevation modified */
+  /* 6dp elevation modified */
+  /* 12dp elevation modified */
+  /* 16dp elevation */
+  /* 24dp elevation */ }
+  [class*="voxels-"] form[class*="-link"] .voxels__hoverable,
+  form[class*="voxels-"][class*="-link"] .voxels__hoverable,
+  [class*="voxels-"] + form[class*="-link"] .voxels__hoverable,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__hoverable {
+    transition: box-shadow 0.25s; }
+    [class*="voxels-"] form[class*="-link"] .voxels__hoverable :hover,
+    form[class*="voxels-"][class*="-link"] .voxels__hoverable :hover,
+    [class*="voxels-"] + form[class*="-link"] .voxels__hoverable :hover,
+    [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__hoverable :hover {
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+  [class*="voxels-"] form[class*="-link"] a.voxels,
+  form[class*="voxels-"][class*="-link"] a.voxels,
+  [class*="voxels-"] + form[class*="-link"] a.voxels,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] a.voxels {
+    color: #4372d5;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent; }
+  [class*="voxels-"] form[class*="-link"] .voxels__valign-wrapper,
+  form[class*="voxels-"][class*="-link"] .voxels__valign-wrapper,
+  [class*="voxels-"] + form[class*="-link"] .voxels__valign-wrapper,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__valign-wrapper {
+    display: flex;
+    align-items: center; }
+  [class*="voxels-"] form[class*="-link"] .voxels__clearfix,
+  form[class*="voxels-"][class*="-link"] .voxels__clearfix,
+  [class*="voxels-"] + form[class*="-link"] .voxels__clearfix,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__clearfix {
+    clear: both; }
+  [class*="voxels-"] form[class*="-link"] .voxels__z-depth-0,
+  form[class*="voxels-"][class*="-link"] .voxels__z-depth-0,
+  [class*="voxels-"] + form[class*="-link"] .voxels__z-depth-0,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__z-depth-0 {
+    box-shadow: none !important; }
+  [class*="voxels-"] form[class*="-link"] .voxels__z-depth-1,
+  form[class*="voxels-"][class*="-link"] .voxels__z-depth-1,
+  [class*="voxels-"] + form[class*="-link"] .voxels__z-depth-1,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__z-depth-1 {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+  [class*="voxels-"] form[class*="-link"] .voxels__z-depth-1-half,
+  form[class*="voxels-"][class*="-link"] .voxels__z-depth-1-half,
+  [class*="voxels-"] + form[class*="-link"] .voxels__z-depth-1-half,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__z-depth-1-half {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); }
+  [class*="voxels-"] form[class*="-link"] .voxels__z-depth-2,
+  form[class*="voxels-"][class*="-link"] .voxels__z-depth-2,
+  [class*="voxels-"] + form[class*="-link"] .voxels__z-depth-2,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__z-depth-2 {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
+  [class*="voxels-"] form[class*="-link"] .voxels__z-depth-3,
+  form[class*="voxels-"][class*="-link"] .voxels__z-depth-3,
+  [class*="voxels-"] + form[class*="-link"] .voxels__z-depth-3,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__z-depth-3 {
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); }
+  [class*="voxels-"] form[class*="-link"] .voxels__z-depth-4,
+  form[class*="voxels-"][class*="-link"] .voxels__z-depth-4,
+  [class*="voxels-"] + form[class*="-link"] .voxels__z-depth-4,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__z-depth-4 {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2); }
+  [class*="voxels-"] form[class*="-link"] .voxels__z-depth-5,
+  form[class*="voxels-"][class*="-link"] .voxels__z-depth-5,
+  [class*="voxels-"] + form[class*="-link"] .voxels__z-depth-5,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__z-depth-5 {
+    box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2); }
+  [class*="voxels-"] form[class*="-link"] .voxels__divider,
+  form[class*="voxels-"][class*="-link"] .voxels__divider,
+  [class*="voxels-"] + form[class*="-link"] .voxels__divider,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] .voxels__divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: color("grey", "lighten-2"); }
+  [class*="voxels-"] form[class*="-link"] blockquote.voxels,
+  form[class*="voxels-"][class*="-link"] blockquote.voxels,
+  [class*="voxels-"] + form[class*="-link"] blockquote.voxels,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] blockquote.voxels {
+    margin: 20px 0;
+    padding-left: 1.5rem;
+    border-left: 5px solid #fe7926; }
+  [class*="voxels-"] form[class*="-link"] i.voxels,
+  form[class*="voxels-"][class*="-link"] i.voxels,
+  [class*="voxels-"] + form[class*="-link"] i.voxels,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] i.voxels {
+    line-height: inherit; }
+    [class*="voxels-"] form[class*="-link"] i.voxels .voxels__left,
+    form[class*="voxels-"][class*="-link"] i.voxels .voxels__left,
+    [class*="voxels-"] + form[class*="-link"] i.voxels .voxels__left,
+    [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] i.voxels .voxels__left {
+      float: left;
+      margin-right: 15px; }
+    [class*="voxels-"] form[class*="-link"] i.voxels .voxels__right,
+    form[class*="voxels-"][class*="-link"] i.voxels .voxels__right,
+    [class*="voxels-"] + form[class*="-link"] i.voxels .voxels__right,
+    [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] i.voxels .voxels__right {
+      float: right;
+      margin-left: 15px; }
+    [class*="voxels-"] form[class*="-link"] i.voxels .voxels__tiny,
+    form[class*="voxels-"][class*="-link"] i.voxels .voxels__tiny,
+    [class*="voxels-"] + form[class*="-link"] i.voxels .voxels__tiny,
+    [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] i.voxels .voxels__tiny {
+      font-size: 1rem; }
+    [class*="voxels-"] form[class*="-link"] i.voxels .voxels__small,
+    form[class*="voxels-"][class*="-link"] i.voxels .voxels__small,
+    [class*="voxels-"] + form[class*="-link"] i.voxels .voxels__small,
+    [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] i.voxels .voxels__small {
+      font-size: 2rem; }
+    [class*="voxels-"] form[class*="-link"] i.voxels .voxels__medium,
+    form[class*="voxels-"][class*="-link"] i.voxels .voxels__medium,
+    [class*="voxels-"] + form[class*="-link"] i.voxels .voxels__medium,
+    [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] i.voxels .voxels__medium {
+      font-size: 4rem; }
+    [class*="voxels-"] form[class*="-link"] i.voxels .voxels__large,
+    form[class*="voxels-"][class*="-link"] i.voxels .voxels__large,
+    [class*="voxels-"] + form[class*="-link"] i.voxels .voxels__large,
+    [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] i.voxels .voxels__large {
+      font-size: 6rem; }
+  [class*="voxels-"] form[class*="-link"] img.voxels__responsive-img,
+  [class*="voxels-"] form[class*="-link"] video.voxels__responsive-video,
+  form[class*="voxels-"][class*="-link"] img.voxels__responsive-img,
+  form[class*="voxels-"][class*="-link"] video.voxels__responsive-video,
+  [class*="voxels-"] + form[class*="-link"] img.voxels__responsive-img,
+  [class*="voxels-"] + form[class*="-link"] video.voxels__responsive-video,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] img.voxels__responsive-img,
+  [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] video.voxels__responsive-video {
+    max-width: 100%;
+    height: auto; }
+
+.editor-block-list__block[data-type^="voxels/"] form.blocks-button__inline-link {
+  margin: 1rem auto 0 auto; }
+  .editor-block-list__block[data-type^="voxels/"] form.blocks-button__inline-link .editor-url-input {
+    max-width: 300px;
+    flex: 1;
+    width: auto;
+    margin-left: 8px; }
+    .editor-block-list__block[data-type^="voxels/"] form.blocks-button__inline-link .editor-url-input [type="text"] {
+      width: 100% !important; }
+
+@media only screen and (max-width: 992px) {
+  .pagination {
+    width: 100%; }
+    .pagination li.prev,
+    .pagination li.next {
+      width: 10%; }
+    .pagination li.pages {
+      width: 80%;
+      overflow: hidden;
+      white-space: nowrap; } }
+
+/** internal components */
+.voxels-image-control .voxels-placeholder {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  margin-bottom: 12px;
+  margin-top: 0.6rem; }
+  .voxels-image-control .voxels-placeholder svg {
+    height: 50px;
+    fill: #ddd; }
+
+.voxels-image-control .voxels-placeholder,
+.voxels-image-control .voxels-image-preview {
+  border-radius: 4px;
+  cursor: pointer; }
+
+.voxels-image-control .voxels-image-preview-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  margin-top: 0.6rem;
+  border-radius: 4px; }
+  .voxels-image-control .voxels-image-preview-wrapper svg {
+    stroke: rgba(0, 0, 0, 0.3);
+    stroke-width: 1px;
+    fill: #fff; }
+
+.voxels-image-control .voxels-image-preview {
+  min-width: 100px;
+  flex: 1 1 100px;
+  margin: 0; }
+
+.voxels-image-control .voxels-image-preview-remove {
+  background: none !important;
+  color: #ddd;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  cursor: not-allowed; }
+
+.voxels-image-upload-placeholder {
+  cursor: copy; }
+
+.voxels-image-upload-has-placeholder {
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%; }
+  .voxels-image-upload-has-placeholder svg {
+    width: 100%;
+    max-height: 50px;
+    fill: #ddd;
+    max-width: 40%; }
+  .voxels-image-upload-has-placeholder:hover {
+    background: #fafafa; }
+
+.voxels-image-upload-has-image:hover {
+  opacity: 0.8; }
+
+.voxels-image-upload-remove {
+  cursor: not-allowed;
+  background: none !important;
+  color: #ddd;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  display: none;
+  z-index: 9 !important; }
+  .voxels-image-upload-remove svg {
+    stroke: rgba(0, 0, 0, 0.3);
+    stroke-width: 1px;
+    fill: #fff;
+    max-width: none; }
+
+.editor-block-list__block.is-selected .voxels-image-upload-remove, .editor-block-list__block.is-hovered .voxels-image-upload-remove {
+  display: block; }
+
+[data-align="full"] .voxels-has-background {
+  border-radius: 0 !important; }
+
+/**
+ * Background/boxed styles
+ */
+.voxels-has-background {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --box-padding-vert: 60px;
+  --box-padding-hori: 35px;
+  transition: all 200ms ease;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 60px 35px; }
+  @media screen and (max-width: 782px) {
+    .voxels-has-background {
+      --box-padding-vert: 40px;
+      --box-padding-hori: 23.33333px;
+      padding: 40px 23.33333px; } }
+  @media screen and (max-width: 600px) {
+    .voxels-has-background {
+      --box-padding-vert: 35px;
+      --box-padding-hori: 17.5px;
+      padding: 35px 17.5px; } }
+  .voxels-has-background:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease; }
+
+.voxels-has-background-image {
+  position: relative;
+  background-size: cover;
+  background-position: center; }
+  .voxels-has-background-image::before {
+    display: block !important;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--voxels-background-color, #fff); }
+  .voxels-has-background-image > * {
+    position: relative;
+    z-index: 2; }
+
+.alignfull.voxels-has-background {
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.voxels-has-background-opacity-0::before {
+  opacity: 0; }
+
+.voxels-has-background-opacity-1::before {
+  opacity: 0.1; }
+
+.voxels-has-background-opacity-2::before {
+  opacity: 0.2; }
+
+.voxels-has-background-opacity-3::before {
+  opacity: 0.3; }
+
+.voxels-has-background-opacity-4::before {
+  opacity: 0.4; }
+
+.voxels-has-background-opacity-5::before {
+  opacity: 0.5; }
+
+.voxels-has-background-opacity-6::before {
+  opacity: 0.6; }
+
+.voxels-has-background-opacity-7::before {
+  opacity: 0.7; }
+
+.voxels-has-background-opacity-8::before {
+  opacity: 0.8; }
+
+.voxels-has-background-opacity-9::before {
+  opacity: 0.9; }
+
+.voxels-has-background-opacity-10::before {
+  opacity: 1; }
+
+/** user-land */
+/**
+ * #.# Styles for Button Block.
+ *
+ * CSS for both Frontend+Backend.
+ */
+.voxels-button {
+  padding-bottom: calc(0.375em - 1px);
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  padding-top: calc(0.375em - 1px);
+  font-size: 1em;
+  line-height: 1.5 !important;
+  align-items: center;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none !important;
+  cursor: pointer;
+  opacity: 1;
+  background: var(--s-primary-color, #2091e1);
+  transition: opacity 0.2s ease-in-out;
+  font-size: 1em; }
+  .voxels-button .voxels-button-inner {
+    font-family: "Heebo", sans-serif;
+    text-decoration: none !important;
+    white-space: nowrap;
+    display: inline-block;
+    color: #fff;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important; }
+  .voxels-button:hover {
+    opacity: 0.85;
+    box-shadow: none !important; }
+
+.voxels-button .voxels-button-inner:hover {
+  color: white; }
+
+.voxels-button-small.voxels-button .voxels-button-inner {
+  font-size: 0.75em; }
+
+.voxels-button-medium.voxels-button {
+  padding-left: 1.25em;
+  padding-right: 1.25em; }
+  .voxels-button-medium.voxels-button .voxels-button-inner {
+    font-size: 1.25em; }
+
+.voxels-button-large.voxels-button {
+  padding-left: 1.5em;
+  padding-right: 1.5em; }
+  .voxels-button-large.voxels-button .voxels-button-inner {
+    font-size: 1.5em; }
+
+.voxels-button-left {
+  margin-right: auto;
+  display: table; }
+
+.voxels-button-center {
+  margin-left: auto;
+  margin-right: auto;
+  display: table; }
+
+.voxels-button-right {
+  margin-left: auto;
+  display: table; }
+
+.voxels-button-full {
+  display: block;
+  text-align: center; }
+
+/**
+ * #.# Editor Styles for Button Block
+ */
+.wp-voxels-button__link {
+  background: #fff;
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-size: 13px;
+  line-height: 1.4; }
+
+/**
+ * #.# Styles for Card Block.
+ *
+ * CSS for both Frontend+Backend.
+ */
+.voxels-card *,
+.voxels-horizontal-card *,
+.voxels-polaroid * p,
+ul li,
+ol li {
+  font-family: "Heebo", sans-serif; }
+
+.voxels-card {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --box-padding-vert: 60px;
+  --box-padding-hori: 35px;
+  transition: all 200ms ease;
+  background-color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 60px 35px;
+  border-radius: 4px; }
+  .voxels-card > * {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important; }
+    .voxels-card > *:first-child {
+      margin-top: 0 !important; }
+    .voxels-card > *:last-child {
+      margin-bottom: 0 !important; }
+  @media screen and (max-width: 782px) {
+    .voxels-card {
+      --box-padding-vert: 40px;
+      --box-padding-hori: 23.33333px;
+      padding: 40px 23.33333px; } }
+  @media screen and (max-width: 600px) {
+    .voxels-card {
+      --box-padding-vert: 35px;
+      --box-padding-hori: 17.5px;
+      padding: 35px 17.5px; } }
+  .voxels-card:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: all 200ms ease; }
+  .voxels-card .voxels-card-image-container {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    padding-top: 0;
+    margin: calc(var(--box-padding-vert) * -1) calc(var(--box-padding-hori) * -1) var(--box-padding-vert) !important;
+    width: calc(100% + var(--box-padding-hori) * 2); }
+    .voxels-card .voxels-card-image-container + *:not(.wp-voxels-button) {
+      margin-top: 0 !important;
+      padding-top: 0 !important; }
+
+.voxels-card-horizontal-panel {
+  transition: box-shadow 0.25s;
+  padding: 24px;
+  border-radius: 2px;
+  background-color: #fff; }
+
+.voxels-card-horizontal {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  display: flex;
+  position: relative;
+  padding-left: 0;
+  background-color: #fff;
+  transition: all 0.25s;
+  border-radius: 2px;
+  max-height: 100%;
+  overflow: hidden; }
+  .voxels-card-horizontal > * {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important; }
+    .voxels-card-horizontal > *:first-child {
+      margin-top: 0 !important; }
+    .voxels-card-horizontal > *:last-child {
+      margin-bottom: 0 !important; }
+  .voxels-card-horizontal .voxels-card-horizontal-content {
+    padding: 24px;
+    border-radius: 0 0 2px 2px; }
+    .voxels-card-horizontal .voxels-card-horizontal-content p {
+      margin: 0; }
+    .voxels-card-horizontal .voxels-card-horizontal-content .voxels-card-horizontal-title {
+      display: block;
+      line-height: 32px; }
+      .voxels-card-horizontal .voxels-card-horizontal-content .voxels-card-horizontal-title i {
+        line-height: 32px; }
+  .voxels-card-horizontal:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
+  .voxels-card-horizontal .voxels-image-upload-has-placeholder,
+  .voxels-card-horizontal .voxels-card-horizontal-image {
+    min-height: 100%;
+    max-height: none;
+    background-size: cover;
+    overflow: visible;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 0; }
+  .voxels-card-horizontal .voxels-card-horizontal-image + .voxels-card-horizontal-content {
+    max-height: 40%; }
+  .voxels-card-horizontal .voxels-card-horizontal-action {
+    background-color: inherit;
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 16px 24px; }
+    .voxels-card-horizontal .voxels-card-horizontal-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+      color: #fe7926;
+      margin-right: 24px;
+      transition: color 0.3s ease; }
+      .voxels-card-horizontal .voxels-card-horizontal-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
+        color: #fe7926; }
+    .voxels-card-horizontal .voxels-card-horizontal-action .voxels-button {
+      margin-top: 0;
+      margin-bottom: 0; }
+  .voxels-card-horizontal .voxels-card-horizontal-reveal {
+    padding: 24px;
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    overflow-y: auto;
+    left: 0;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none; }
+    .voxels-card-horizontal .voxels-card-horizontal-reveal .voxels-card-horizontal-title {
+      cursor: pointer;
+      display: block; }
+  .voxels-card-horizontal .voxels-card-horizontal-image {
+    min-height: 100%;
+    max-height: none;
+    background-size: cover;
+    overflow: visible;
+    min-width: 35%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 0 !important; }
+    .voxels-card-horizontal .voxels-card-horizontal-image .voxels-card-horizontal-title {
+      color: #fff;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-width: 100%;
+      padding: 0 24px; }
+    .voxels-card-horizontal .voxels-card-horizontal-image img {
+      height: 100%; }
+  .voxels-card-horizontal .voxels-card-horizontal-stacked {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative; }
+    .voxels-card-horizontal .voxels-card-horizontal-stacked .voxels-card-horizontal-content {
+      flex-grow: 1; }
+  .voxels-card-horizontal.sticky-action .voxels-card-horizontal-action {
+    z-index: 2; }
+  .voxels-card-horizontal.sticky-action .voxels-card-horizontal-reveal {
+    z-index: 1;
+    padding-bottom: 64px; }
+
+.voxels-card-horizontal-image .voxels-image-upload-remove {
+  position: relative;
+  left: 4px; }
+
+.wp-block-voxels-click-to-tweet {
+  display: block;
+  transition: all 800ms;
+  box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); }
+  .wp-block-voxels-click-to-tweet:hover {
+    box-shadow: none !important;
+    transition: all 800ms; }
+
+.wp-block-voxels-click-to-tweet .__content {
+  padding: 1.3em 4em 1.3em 1.3em;
+  color: white;
+  font-size: 1.3em;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px; }
+
+.wp-block-voxels-click-to-tweet .__footer {
+  position: relative;
+  padding: 10px 20px 10px 10px;
+  color: white;
+  font-size: .8em;
+  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border-bottom-right-radius: 3px; }
+  .wp-block-voxels-click-to-tweet .__footer .__footer-triangle {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-right: 16px solid transparent; }
+  .wp-block-voxels-click-to-tweet .__footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; }
+  .wp-block-voxels-click-to-tweet .__footer svg {
+    display: inline-block;
+    height: 20px; }
+
+
+/*# sourceMappingURL=public-702ed347.css.map*/

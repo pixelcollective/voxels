@@ -56,33 +56,5 @@ class voxels_Global
 	public function add_template_to_posts()
 	{
 
-		/**
-		 * set core post template
-		 *
-		 * @since 0.0.1
-		 */
-		$post_type_object = get_post_type_object( 'post' );
-
-		$post_type_object->template = array(
-			array( 'voxels/header',
-				array(
-					'align' => 'full'
-				)
-			),
-			array( 'voxels/two-column-layout', ),
-			array( 'voxels/header',
-				array(
-					'align' => 'full'
-				)
-			),
-		);
-
-		/**
-		 * 🔒 core post template lock 🔒
-		 *
-		 * @since 0.0.1
-		 */
-		$post_type_object->template_lock = 'all';
-
 	}
 }

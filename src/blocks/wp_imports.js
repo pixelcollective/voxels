@@ -17,7 +17,8 @@ export const {
   QueryControls,
   CheckboxControl,
   FormToggle,
-} = wp.components
+  TextareaControl
+} = wp.components;
 
 export const {
   InspectorControls,
@@ -26,14 +27,14 @@ export const {
   RichText,
   URLInput,
   MediaUpload,
-} = wp.editor.InspectorControls ? wp.editor : wp.blocks
+} = wp.editor.InspectorControls ? wp.editor : wp.blocks;
 
 export const { PanelColorSettings, BlockAlignmentToolbar, InnerBlocks } = wp.editor;
 
 export const {
   Fragment,
-  renderToString,
-} = wp.element
+  renderToString
+} = wp.element;
 
 export const {
   omit,

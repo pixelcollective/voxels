@@ -1,0 +1,54 @@
+.wp-block-voxels-click-to-tweet {
+  display: block;
+  transition: all 800ms;
+
+  @include voxels-z-depth-3();
+
+  &:hover {
+    @include voxels-z-depth-0();
+    transition: all 800ms;
+  }
+}
+
+.wp-block-voxels-click-to-tweet {
+  .__content {
+    padding: 1.3em 4em 1.3em 1.3em;
+    color: white;
+    font-size: 1.3em;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+
+  .__footer {
+    position: relative;
+    padding: 10px 20px 10px 10px;
+    color: white;
+    font-size: .8em;
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-bottom-right-radius: 3px;
+
+    .__footer-triangle {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      width: 0;
+      height: 0;
+      border-right: 16px solid transparent;
+    }
+
+    & a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    svg {
+      display: inline-block;
+      height: 20px;
+    }
+  }
+}
