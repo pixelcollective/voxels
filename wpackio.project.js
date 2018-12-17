@@ -20,7 +20,11 @@ module.exports = {
         editor: ['./src/blocks/editor.js'],
         public: ['./src/blocks/public.js']
       },
-      webpackConfig: undefined,
+      webpackConfig: {
+        output: {
+          filename: "[name].js",
+        },
+      },
     },
   ],
   outputPath: 'assets',
@@ -46,16 +50,7 @@ module.exports = {
     ],
   }),
   packageFiles: [
-    'inc/**',
-    'vendor/**',
-    'scripts/**',
-    '*.php',
-    '*.md',
-    'readme.txt',
-    'languages/**',
-    'layouts/**',
-    'LICENSE',
-    '*.css',
+    'assets/blocks/**',
   ],
   // Path to package directory, relative to the root
   packageDirPath: 'package',

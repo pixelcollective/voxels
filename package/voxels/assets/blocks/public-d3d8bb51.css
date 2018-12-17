@@ -476,7 +476,8 @@ ul li,
 ol li {
   font-family: "Heebo", sans-serif; }
 
-.wp-block-voxels-card {
+.wp-block-voxels-card,
+.wp-block-voxels-polaroid {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
@@ -488,27 +489,34 @@ ol li {
   overflow: hidden;
   padding: 60px 35px;
   border-radius: 4px; }
-  .wp-block-voxels-card > * {
+  .wp-block-voxels-card > *,
+  .wp-block-voxels-polaroid > * {
     margin-top: 0 !important;
     margin-bottom: 1rem !important; }
-    .wp-block-voxels-card > *:first-child {
+    .wp-block-voxels-card > *:first-child,
+    .wp-block-voxels-polaroid > *:first-child {
       margin-top: 0 !important; }
-    .wp-block-voxels-card > *:last-child {
+    .wp-block-voxels-card > *:last-child,
+    .wp-block-voxels-polaroid > *:last-child {
       margin-bottom: 0 !important; }
   @media screen and (max-width: 782px) {
-    .wp-block-voxels-card {
+    .wp-block-voxels-card,
+    .wp-block-voxels-polaroid {
       --box-padding-vert: 40px;
       --box-padding-hori: 23.33333px;
       padding: 40px 23.33333px; } }
   @media screen and (max-width: 600px) {
-    .wp-block-voxels-card {
+    .wp-block-voxels-card,
+    .wp-block-voxels-polaroid {
       --box-padding-vert: 35px;
       --box-padding-hori: 17.5px;
       padding: 35px 17.5px; } }
-  .wp-block-voxels-card:hover {
+  .wp-block-voxels-card:hover,
+  .wp-block-voxels-polaroid:hover {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
     transition: all 200ms ease; }
-  .wp-block-voxels-card .wp-block-voxels-card-image-container {
+  .wp-block-voxels-card .wp-block-voxels-card-image-container,
+  .wp-block-voxels-polaroid .wp-block-voxels-card-image-container {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     height: 300px;
@@ -520,18 +528,23 @@ ol li {
     margin: calc(var(--box-padding-vert) * -1) calc(var(--box-padding-hori) * -1) var(--box-padding-vert) !important;
     width: calc(100% + var(--box-padding-hori) * 2);
     border-bottom: 1px solid rgba(0, 0, 0, 0.158); }
-    .wp-block-voxels-card .wp-block-voxels-card-image-container > * {
+    .wp-block-voxels-card .wp-block-voxels-card-image-container > *,
+    .wp-block-voxels-polaroid .wp-block-voxels-card-image-container > * {
       margin-top: 0 !important;
       margin-bottom: 1rem !important; }
-      .wp-block-voxels-card .wp-block-voxels-card-image-container > *:first-child {
+      .wp-block-voxels-card .wp-block-voxels-card-image-container > *:first-child,
+      .wp-block-voxels-polaroid .wp-block-voxels-card-image-container > *:first-child {
         margin-top: 0 !important; }
-      .wp-block-voxels-card .wp-block-voxels-card-image-container > *:last-child {
+      .wp-block-voxels-card .wp-block-voxels-card-image-container > *:last-child,
+      .wp-block-voxels-polaroid .wp-block-voxels-card-image-container > *:last-child {
         margin-bottom: 0 !important; }
-    .wp-block-voxels-card .wp-block-voxels-card-image-container + *:not(.wp-block-voxels-button) {
+    .wp-block-voxels-card .wp-block-voxels-card-image-container + *:not(.wp-block-voxels-button),
+    .wp-block-voxels-polaroid .wp-block-voxels-card-image-container + *:not(.wp-block-voxels-button) {
       padding: 1rem 0 1rem 0;
       margin-top: 0 !important;
       padding-top: 0 !important; }
-  .wp-block-voxels-card svg {
+  .wp-block-voxels-card svg,
+  .wp-block-voxels-polaroid svg {
     width: 100%;
     height: 90%;
     padding-top: 2%;
@@ -691,4 +704,4 @@ ol li {
     height: 20px; }
 
 
-/*# sourceMappingURL=public-50300912.css.map*/
+/*# sourceMappingURL=public-d3d8bb51.css.map*/

@@ -12,7 +12,8 @@ ol li {
   font-family: $family-sans-serif;
 }
 
-.wp-block-voxels-card {
+.wp-block-voxels-card,
+.wp-block-voxels-polaroid {
   @include baseBlock();
   @include box();
 

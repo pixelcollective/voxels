@@ -1,23 +1,23 @@
 {
   "editor.css": "blocks/editor-22fdb9d8.css",
   "editor.css.map": "blocks/editor-22fdb9d8.css.map",
-  "editor.js": "editor.js",
-  "editor.js.map": "editor.js.map",
+  "editor.js": "blocks/editor-2f601f3b.js",
+  "editor.js.map": "blocks/editor-2f601f3b.js.map",
   "public.css": "blocks/public-d3d8bb51.css",
   "public.css.map": "blocks/public-d3d8bb51.css.map",
-  "public.js": "public.js",
-  "public.js.map": "public.js.map",
-  "runtime.js": "runtime.js",
-  "runtime.js.map": "runtime.js.map",
+  "public.js": "blocks/public-ed5a1115.js",
+  "public.js.map": "blocks/public-ed5a1115.js.map",
+  "runtime.js": "blocks/runtime-0a30aae5.js",
+  "runtime.js.map": "blocks/runtime-0a30aae5.js.map",
   "wpackioEp": {
     "editor": {
       "js": [
-        "runtime.js",
-        "editor.js"
+        "blocks/runtime-0a30aae5.js",
+        "blocks/editor-2f601f3b.js"
       ],
       "js.map": [
-        "runtime.js.map",
-        "editor.js.map"
+        "blocks/runtime-0a30aae5.js.map",
+        "blocks/editor-2f601f3b.js.map"
       ],
       "css": [
         "blocks/editor-22fdb9d8.css"
@@ -28,12 +28,12 @@
     },
     "public": {
       "js": [
-        "runtime.js",
-        "public.js"
+        "blocks/runtime-0a30aae5.js",
+        "blocks/public-ed5a1115.js"
       ],
       "js.map": [
-        "runtime.js.map",
-        "public.js.map"
+        "blocks/runtime-0a30aae5.js.map",
+        "blocks/public-ed5a1115.js.map"
       ],
       "css": [
         "blocks/public-d3d8bb51.css"
