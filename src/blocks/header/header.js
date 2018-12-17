@@ -101,14 +101,14 @@ registerBlockType('voxels/header', {
     const mainClasses = classnames(
       [
         className,
-        "wp-blocks-voxels-header",
-        "wp-blocks-voxels-has-background-opacity-" +
+        "wp-block-voxels-header",
+        "wp-block-voxels-has-background-opacity-" +
           1 * Math.round(backgroundOpacity / 1)
       ],
       {
-        "wp-blocks-voxels-has-background":
+        "wp-block-voxels-has-background":
           backgroundColor || backgroundImageURL,
-        "wp-blocks-voxels-has-background-image": backgroundImageURL
+        "wp-block-voxels-has-background-image": backgroundImageURL
       }
     );
 
@@ -149,11 +149,11 @@ registerBlockType('voxels/header', {
               })} />
         </InspectorControls>
         <div className={mainClasses} style={mainStyle}>
-          <div className="wp-blocks-voxels-header-wrapper">
-          <RichText tagName="h2" className="wp-blocks-voxels-header-title" placeholder={title.default} value={title} onChange={value => setAttributes(
+          <div className="wp-block-voxels-header-wrapper">
+          <RichText tagName="h2" className="wp-block-voxels-header-title" placeholder={title.default} value={title} onChange={value => setAttributes(
                   { title: value }
                 )} style={{ textAlign: contentAlign, color: titleColor }} />
-          <RichText tagName="p" className="wp-blocks-voxels-header-subtitle" placeholder={subtitle.default} value={subtitle} onChange={value => setAttributes(
+          <RichText tagName="p" className="wp-block-voxels-header-subtitle" placeholder={subtitle.default} value={subtitle} onChange={value => setAttributes(
                   { subtitle: value }
                 )} style={{ textAlign: contentAlign, color: subtitleColor }} />
           </div>
@@ -178,8 +178,8 @@ registerBlockType('voxels/header', {
 
     const mainClasses = classnames([
       className,
-      'wp-blocks-voxels-header',
-      'wp-blocks-voxels-has-background-opacity-' + (1 * Math.round(backgroundOpacity / 1)),
+      'wp-block-voxels-header',
+      'wp-block-voxels-has-background-opacity-' + (1 * Math.round(backgroundOpacity / 1)),
     ], {
         'voxels-has-background': backgroundColor || backgroundImageURL,
         'voxels-has-background-image': backgroundImageURL,
@@ -195,11 +195,11 @@ registerBlockType('voxels/header', {
 
     return (
       <div className={mainClasses} style={mainStyle}>
-        <div className='wp-blocks-voxels-header-wrapper'>
+        <div className='wp-block-voxels-header-wrapper'>
           {!RichText.isEmpty(title) && (
             <RichText.Content
               tagName='h2'
-              className='wp-blocks-voxels-header-title'
+              className='wp-block-voxels-header-title'
               style={{ color: titleColor }}
               value={title}
             />
@@ -207,7 +207,7 @@ registerBlockType('voxels/header', {
           {!RichText.isEmpty(subtitle) && (
             <RichText.Content
               tagName='p'
-              className='wp-blocks-voxels-header-subtitle'
+              className='wp-block-voxels-header-subtitle'
               style={{ color: subtitleColor }}
               value={subtitle}
             />

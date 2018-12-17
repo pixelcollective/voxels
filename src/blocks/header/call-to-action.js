@@ -14,16 +14,10 @@ import {
   IconButton,
   PanelColorSettings,
   Dashicon,
-  RangeControl,
-  SelectControl,
-  Toolbar,
-  Button,
   RichText,
   AlignmentToolbar,
-  MediaUpload,
   BlockControls,
   InspectorControls,
-  PanelBody,
   URLInput,
   Fragment,
 } from '../wp_imports.js'
@@ -149,11 +143,11 @@ registerBlockType('voxels/call-to-action', {
 
     const mainClasses = classnames([
       className,
-      'voxels-call-to-action',
-      'voxels-has-background-opacity-' + (1 * Math.round(backgroundOpacity / 1)),
+      'wp-block-voxels-call-to-action',
+      'wp-block-voxels-has-background-opacity-' + (1 * Math.round(backgroundOpacity / 1)),
     ], {
-        'voxels-has-background': backgroundColor || backgroundImageURL,
-        'voxels-has-background-image': backgroundImageURL,
+        'wp-block-voxels-has-background': backgroundColor || backgroundImageURL,
+        'wp-block-voxels-has-background-image': backgroundImageURL,
       })
 
     const mainStyle = {
@@ -293,11 +287,11 @@ registerBlockType('voxels/call-to-action', {
 
     const mainClasses = classnames([
       className,
-      'voxels-call-to-action',
-      'voxels-has-background-opacity-' + (1 * Math.round(backgroundOpacity / 1)),
+      'wp-block-voxels-call-to-action',
+      'wp-block-voxels-has-background-opacity-' + (1 * Math.round(backgroundOpacity / 1)),
     ], {
-        'voxels-has-background': backgroundColor || backgroundImageURL,
-        'voxels-has-background-image': backgroundImageURL,
+        'wp-block-voxels-has-background': backgroundColor || backgroundImageURL,
+        'wp-block-voxels-has-background-image': backgroundImageURL,
       })
 
     const mainStyle = {

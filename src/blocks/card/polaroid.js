@@ -31,8 +31,6 @@ export const edit = (props) => {
 
   const {
     isSelected,
-    editable,
-    setState,
     className,
     setAttributes
   } = props;
@@ -56,7 +54,7 @@ export const edit = (props) => {
 
   const mainClasses = classnames([
     className,
-    '.wp-block-voxels-card',
+    'wp-block-voxels-card',
   ])
 
   return (
@@ -100,7 +98,7 @@ export const edit = (props) => {
       </InspectorControls>
       <div className={mainClasses}>
         <ImageUploadPlaceholder
-          className='.wp-block-voxels-card-image-container'
+          className='wp-block-voxels-card-image-container'
           imageID={mediaID}
           imageURL={mediaURL}
           onRemove={() => { setAttributes({ mediaURL: '', mediaID: '' }) }}
@@ -109,7 +107,7 @@ export const edit = (props) => {
         <RichText
           tagName={'h4'}
           value={heading}
-          className={'.wp-block-voxels-card-heading'}
+          className={'wp-block-voxels-card-heading'}
           onChange={(text) => setAttributes({ heading: text })}
           style={{
             color: headingColor,
@@ -120,7 +118,7 @@ export const edit = (props) => {
         <RichText
           tagName={'p'}
           value={des}
-          className={'.wp-block-voxels-card-des'}
+          className={'wp-block-voxels-card-des'}
           onChange={(text) => setAttributes({ des: text })}
           style={{
             color: desColor,
@@ -137,7 +135,7 @@ export const edit = (props) => {
       {isSelected && !buttonHidden && (
         <form
           onSubmit={(event) => event.preventDefault()}
-          className={`blocks-button__inline-link voxels-button-${contentAlign}`}
+          className={`blocks-button__inline-link wp-block-voxels-button-${contentAlign}`}
           style={{ marginTop: 10 }}
         >
           <Dashicon icon={'admin-links'} />
@@ -177,14 +175,14 @@ export const save = (props) => {
 
   const mainClasses = classnames([
     className,
-    '.wp-block-voxels-card',
+    'wp-block-voxels-card',
   ], {
       'has-image': mediaURL,
     })
 
   return (
     <div className={mainClasses}>
-      {mediaURL && <div className="voxels-card-image-container" style={{ backgroundImage: `url(${mediaURL})`, textAlign: contentAlign }} data-src={mediaURL} />}
+      {mediaURL && <div className="wp-block-card-image-container" style={{ backgroundImage: `url(${mediaURL})`, textAlign: contentAlign }} data-src={mediaURL} />}
       {!RichText.isEmpty(heading) && (
         <RichText.Content
           tagName="h4"
@@ -195,7 +193,7 @@ export const save = (props) => {
       {!RichText.isEmpty(des) && (
         <RichText.Content
           tagName="p"
-          className='.wp-block-voxels-card-des'
+          className='wp-block-voxels-card-des'
           style={{ color: desColor, textAlign: contentAlign }}
           value={des}
         />

@@ -55,7 +55,7 @@ export const edit = (props) => {
 
   const mainClasses = classnames([
     className,
-    'wp-block-voxels-card-horizontal-container voxels-card-horizontal',
+    'wp-block-voxels-card-horizontal',
   ])
 
   return (
@@ -105,8 +105,8 @@ export const edit = (props) => {
           onRemove={() => { setAttributes({ mediaURL: '', mediaID: '' }) }}
           onChange={({ url, id }) => { setAttributes({ mediaURL: url, mediaID: id }) }}
         />
-        <div className="voxels-card-horizontal-stacked">
-          <div className="voxels-card-horizontal-content">
+        <div className='wp-block-voxels-card-horizontal-stacked'>
+          <div className='wp-block-voxels-card-horizontal-content'>
             <RichText
               tagName={'h4'}
               value={heading}
@@ -123,15 +123,12 @@ export const edit = (props) => {
               value={des}
               className={'wp-block-voxels-card-horizontal-description'}
               onChange={(text) => setAttributes({ des: text })}
-              style={{
-                color: desColor,
-                textAlign: contentAlign
-              }}
+              style={{ color: desColor, textAlign: contentAlign }}
               keepPlaceholderOnFocus
             />
           </div>
           {!buttonHidden && (
-          <div className="voxels-card-horizontal-action">
+          <div className='wp-block-voxels-card-horizontal-action'>
             <ButtonEdit hidden={buttonHidden} size={size} align={contentAlign} color={buttonTextColor} backgroundColor={buttonColor} text={buttonText} borderRadius={cornerButtonRadius}
               onChange={(text) => setAttributes({ buttonText: text })}
             />
@@ -142,7 +139,7 @@ export const edit = (props) => {
       {isSelected && !buttonHidden && (
         <form
           onSubmit={(event) => event.preventDefault()}
-          className={`blocks-button__inline-link voxels-button-${contentAlign}`}
+          className={`blocks-button__inline-link wp-block-voxels-button-${contentAlign}`}
           style={{ marginTop: 10 }}
         >
           <Dashicon icon={'admin-links'} />
@@ -182,25 +179,25 @@ export const save = (props) => {
 
   const mainClasses = classnames([
     className,
-    'wp-block-voxels-card-horizontal-container voxels-card-horizontal',
+    'wp-block-voxels-card-horizontal',
   ])
 
   return (
     <div className={mainClasses}>
-      {mediaURL && <div className="voxels-card-horizontal-image" style={{ backgroundImage: `url(${mediaURL})`, textAlign: contentAlign }} data-src={mediaURL} />}
-      <div className="voxels-card-horizontal-stacked">
-        <div className="voxels-card-horizontal-content">
+      {mediaURL && <div className='wp-block-voxels-card-horizontal-image' style={{ backgroundImage: `url(${mediaURL})`, textAlign: contentAlign }} data-src={mediaURL} />}
+      <div className='wp-block-voxels-card-horizontal-stacked'>
+        <div className='wp-block-voxels-card-horizontal-content'>
       {!RichText.isEmpty(heading) && (
         <RichText.Content
-          tagName="h4"
-          className="voxels-card-horizontal-title"
+          tagName='h4'
+          className='wp-block-voxels-card-horizontal-title'
           style={{ color: headingColor, textAlign: contentAlign }}
           value={heading}
         />
       )}
           {!RichText.isEmpty(des) && (
             <RichText.Content
-              tagName="p"
+              tagName='p'
               className='wp-block-voxels-card-horizontal-description'
               style={{ color: desColor, textAlign: contentAlign }}
               value={des}
@@ -208,7 +205,7 @@ export const save = (props) => {
           )}
         </div>
         {!buttonHidden && (
-        <div className="voxels-card-horizontal-action">
+        <div className='wp-block-voxels-card-horizontal-action'>
             <ButtonSave hidden={buttonHidden} size={size} url={buttonURL} align={contentAlign} color={buttonTextColor} text={buttonText} backgroundColor={buttonColor} borderRadius={cornerButtonRadius} />
         </div>
         )}

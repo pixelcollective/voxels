@@ -3,38 +3,38 @@
  *
  * CSS for both Frontend+Backend.
  */
+
 .wp-block-voxels-button {
-  @include baseButton();
+  @include voxels-z-depth-2();
 
   border: none;
   border-radius: 4px;
-  box-shadow: none !important;
   cursor: pointer;
+  display: inline-block;
 
   .wp-block-voxels-button-inner {
     font-family: $family-sans-serif;
     text-decoration: none !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
     white-space: nowrap;
     display: inline-block;
-    color: #fff;
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
   }
 
   opacity: 1;
-  background: var(--s-primary-color, #2091e1);
   transition: opacity 0.2s ease-in-out;
   font-size: 1em;
 
   &:hover {
     opacity: 0.85;
     box-shadow: none !important;
-  }
-}
 
-.wp-block-voxels-button .wp-block-voxels-button-inner:hover {
-  color: white;
+    @include voxels-z-depth-0();
+  }
+
+  .blocks-button__inline-link {
+    display: block;
+  }
 }
 
 .wp-block-voxels-button-small.wp-block-voxels-button .wp-block-voxels-button-inner {
@@ -70,12 +70,12 @@
   display: table;
 }
 
-.wp-block-voxels-button-right {
+.wp-block-voxels-button.wp-block-voxels-button-right {
   margin-left: auto;
   display: table;
 }
 
-.wp-block-voxels-button-full {
+.wp-block-voxels-button.wp-block-voxels-button-full {
   display: block;
   text-align: center;
 }

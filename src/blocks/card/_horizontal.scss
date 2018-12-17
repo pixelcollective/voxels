@@ -68,16 +68,6 @@ ol li {
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 16px $voxels-card-horizontal-padding;
 
-    a:not(.btn):not(.btn-large):not(.btn-floating) {
-      color: $voxels-card-horizontal-link-color;
-      margin-right: $voxels-card-horizontal-padding;
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $voxels-card-horizontal-link-color-light;
-      }
-    }
-
     .wp-block-voxels-button {
       margin-top: 0;
       margin-bottom: 0;

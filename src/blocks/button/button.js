@@ -21,7 +21,6 @@ import {
 	Dashicon,
 	IconButton,
 	URLInput,
-	applyFilters,
 	Fragment,
 } from './../wp_imports'
 
@@ -29,20 +28,11 @@ export const edit = ( props ) => {
 
 	const { isSelected, className, setAttributes } = props;
 
-	const { url, text, color, textColor, buttonHidden, size, align, cornerButtonRadius, design } = props.attributes;
+	const { url, text, color, textColor, buttonHidden, size, align, cornerButtonRadius } = props.attributes;
 
 	const mainClasses = classnames( [
 		className,
-		'wp-blocks-voxels-button',
 	] )
-
-	const defaultEditDesign = (
-		<ButtonEdit
-		onChange={ (text) => setAttributes( { text } ) }
-		className={ mainClasses }
-		align={ align } hidden={''} size={ size } backgroundColor={ color } color={ textColor } text={ text }  borderRadius={ cornerButtonRadius } />
-	)
-	const editDesign = applyFilters( 'tinypixel.designs.button.edit', defaultEditDesign, design, props )
 
 	return (
 		<Fragment>
@@ -70,11 +60,23 @@ export const edit = ( props ) => {
 					onChangeButtonBorderRadius={ ( cornerRad ) => setAttributes( { cornerButtonRadius: cornerRad } ) }
 				/>
 			</InspectorControls>
-			{ editDesign }
+
+			<ButtonEdit
+				onChange={(text) => setAttributes({ text })}
+				className={mainClasses}
+				align={align}
+				hidden={''}
+				size={size}
+				backgroundColor={color}
+				color={textColor}
+				text={text}
+				borderRadius={cornerButtonRadius}
+			/>
+
 			{ isSelected && (
 				<form
 					onSubmit={ ( event ) => event.preventDefault() }
-					className={ `blocks-button__inline-link` }>
+					className={`blocks-button__inline-link wp-block-voxels-button-${align}` }>
 					<Dashicon icon={ 'admin-links' } />
 					<URLInput
 						value={ url }
@@ -94,11 +96,10 @@ export const edit = ( props ) => {
 export const save = ( props ) => {
 
 	const { className } = props
-	const { url, text, align, color, textColor, size, buttonHidden, cornerButtonRadius, design } = props.attributes;
+	const { url, text, align, color, textColor, size, buttonHidden, cornerButtonRadius } = props.attributes;
 
 	const mainClasses = classnames( [
 		className,
-		'wp-blocks-voxels-button',
 	] )
 
 	const saved = <ButtonSave hidden={buttonHidden} className={ mainClasses } align={ align } size={ size } url={ url } color={ textColor } text={ text } backgroundColor={ color } borderRadius={ cornerButtonRadius } />;
@@ -126,6 +127,7 @@ export const schema = {
 	},
 	color: {
 		type: 'string',
+		default: '#007ab5',
 	},
 	textColor: {
 		type: 'string',

@@ -50,7 +50,7 @@ export const edit = (props) => {
 
   const mainClasses = classnames([
     className,
-    'voxels-card',
+    'wp-block-voxels-card',
   ])
 
   return (
@@ -96,7 +96,7 @@ export const edit = (props) => {
         <RichText
           tagName={'h4'}
           value={heading}
-          className={'voxels-card-heading'}
+          className={'wp-block-voxels-card-heading'}
           onChange={(text) => setAttributes({ heading: text })}
           style={{
             color: headingColor,
@@ -107,7 +107,7 @@ export const edit = (props) => {
         <RichText
           tagName={'p'}
           value={des}
-          className={'voxels-card-des'}
+          className={'wp-block-voxels-card-subheading'}
           onChange={(text) => setAttributes({ des: text })}
           style={{
             color: desColor,
@@ -121,7 +121,7 @@ export const edit = (props) => {
       {isSelected && !buttonHidden && (
         <form
           onSubmit={(event) => event.preventDefault()}
-          className={`blocks-button__inline-link voxels-button-${contentAlign}`}
+          className={`blocks-button__inline-link wp-block-voxels-button-${contentAlign}`}
           style={{ marginTop: 10, }}
         >
           <Fragment>
@@ -162,7 +162,7 @@ export const save = (props) => {
 
   const mainClasses = classnames([
     className,
-    'voxels-card',
+    'wp-block-voxels-card',
   ])
 
   return (
@@ -177,7 +177,7 @@ export const save = (props) => {
       {!RichText.isEmpty(des) && (
         <RichText.Content
           tagName="p"
-          className='voxels-card-des'
+          className='wp-block-voxels-card-des'
           style={{ color: desColor, textAlign: contentAlign }}
           value={des}
         />
@@ -190,12 +190,12 @@ export const save = (props) => {
 const schema = {
   heading: {
     source: 'html',
-    selector: '.voxels-card h4',
+    selector: '.wp-block-voxels-card h4',
     default: __('Your Headline Here')
   },
   des: {
     source: 'html',
-    selector: '.voxels-card-des',
+    selector: '.wp-block-voxels-card-des',
     default: __('The Headline concept and buttressing tagline are followed by a brief description. Remember to set an image and BAM! You\'ve got yourself a card 👏🏽')
   },
   headingColor: {
@@ -207,12 +207,12 @@ const schema = {
   buttonURL: {
     type: 'string',
     source: 'attribute',
-    selector: '.voxels-button-inner',
+    selector: '.wp-block-voxels-button-inner',
     attribute: 'href',
   },
   buttonText: {
     source: 'html',
-    selector: '.voxels-button-inner',
+    selector: '.wp-block-voxels-button-inner',
     default: __('Button')
   },
   buttonColor: {

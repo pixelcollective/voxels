@@ -1,10 +1,10 @@
 {
-  "editor.css": "blocks/editor-9cbe9e0b.css",
-  "editor.css.map": "blocks/editor-9cbe9e0b.css.map",
-  "editor.js": "blocks/editor-7a0d4922.js",
-  "editor.js.map": "blocks/editor-7a0d4922.js.map",
-  "public.css": "blocks/public-702ed347.css",
-  "public.css.map": "blocks/public-702ed347.css.map",
+  "editor.css": "blocks/editor-6c5f9ecf.css",
+  "editor.css.map": "blocks/editor-6c5f9ecf.css.map",
+  "editor.js": "blocks/editor-4e19b424.js",
+  "editor.js.map": "blocks/editor-4e19b424.js.map",
+  "public.css": "blocks/public-d6489382.css",
+  "public.css.map": "blocks/public-d6489382.css.map",
   "public.js": "blocks/public-ed5a1115.js",
   "public.js.map": "blocks/public-ed5a1115.js.map",
   "runtime.js": "blocks/runtime-0a30aae5.js",
@@ -13,17 +13,17 @@
     "editor": {
       "js": [
         "blocks/runtime-0a30aae5.js",
-        "blocks/editor-7a0d4922.js"
+        "blocks/editor-4e19b424.js"
       ],
       "js.map": [
         "blocks/runtime-0a30aae5.js.map",
-        "blocks/editor-7a0d4922.js.map"
+        "blocks/editor-4e19b424.js.map"
       ],
       "css": [
-        "blocks/editor-9cbe9e0b.css"
+        "blocks/editor-6c5f9ecf.css"
       ],
       "css.map": [
-        "blocks/editor-9cbe9e0b.css.map"
+        "blocks/editor-6c5f9ecf.css.map"
       ]
     },
     "public": {
@@ -36,10 +36,10 @@
         "blocks/public-ed5a1115.js.map"
       ],
       "css": [
-        "blocks/public-702ed347.css"
+        "blocks/public-d6489382.css"
       ],
       "css.map": [
-        "blocks/public-702ed347.css.map"
+        "blocks/public-d6489382.css.map"
       ]
     }
   }

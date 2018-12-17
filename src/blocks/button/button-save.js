@@ -16,20 +16,21 @@ function ButtonSave( props ) {
 
 	const mainClasses = classnames( [
 		className,
-		'voxels-button',
-		`voxels-button-${align}`,
-		`voxels-button-${size}`,
+		`wp-block-voxels-button-${align}`,
+		`wp-block-voxels-button-${size}`,
 	] )
 	if(!hidden) {
 	return (
-		<div className={ mainClasses } style={ style }>
-			<RichText.Content
-				tagName="a"
-				className={ `voxels-button-inner` }
-				href={ url }
-				style={ { color } }
-				value={ text }
-			/>
+		<div className={`wrapper`}>
+			<div className={ mainClasses } style={ style }>
+				<RichText.Content
+					tagName="a"
+					className={ `wp-block-voxels-button-inner` }
+					href={ url }
+					style={ { color } }
+					value={ text }
+				/>
+			</div>
 		</div>
 	);
 	} return null;
