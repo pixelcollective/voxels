@@ -1,1 +1,1 @@
-import './public.scss';
+import './public.scss'

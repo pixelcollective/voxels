@@ -22,22 +22,28 @@
     "start": "wpackio-scripts start",
     "archive": "wpackio-scripts pack",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
-    "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
-    "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\""
+    "lint:scripts": "eslint src/**/*.js",
+    "lint:styles": "stylelint \"src/**/*.{css,sass,scss,sss,less}\""
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=6.4.1"
   },
   "dependencies": {
     "@wpackio/entrypoint": "^2.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "lodash": "^4.17.11",
+    "materialize-css": "^1.0.0",
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
     "@wpackio/scripts": "^2.8.0",
     "classnames": "^2.2.6",
+    "eslint": "~4.19.1",
+    "eslint-loader": "~1.9",
+    "eslint-plugin-import": "~2.14.0",
     "node-sass": "^4.10.0",
-    "stylelint": "^9.9.0",
-    "stylelint-config-standard": "^18.2.0",
-    "eslint": "^5.10.0"
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "~18.2.0",
+    "stylelint-webpack-plugin": "^0.10.5"
   }
 }

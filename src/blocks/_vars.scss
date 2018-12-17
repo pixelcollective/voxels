@@ -2,9 +2,9 @@
  * Materialize.css vars
  */
 $spacer: 2rem;
-$family-sans-serif: 'Heebo', sans-serif;
-$family-serif: 'Roboto Slab', serif;
-$family-mono: 'Roboto Mono', monospace;
+$family-sans-serif: "Heebo", sans-serif;
+$family-serif: "Roboto Slab", serif;
+$family-mono: "Roboto Mono", monospace;
 $content-heading-color: rgba(255, 255, 255, 100);
 $content-heading-weight: 500;
 $white: white;
@@ -17,6 +17,11 @@ $secondary-dark: rgb(18, 41, 185);
 $alert: red;
 $red: #e91e63;
 $purple: rgb(60, 10, 169);
+
+$color-advice: #83BD71;
+$color-avoid: #B54D4D;
+$color-warning: #FFC334;
+$color-info: #48ADD8;
 
 $materialize-red: (
   base:       #e91e63,
@@ -565,9 +570,9 @@ $sidenav-line-height: $sidenav-item-height !default;
 
 // 15. Photo Slider
 // ==========================================================================
-$slider-bg-color: color('grey', 'base') !default;
-$slider-bg-color-light: color('grey', 'lighten-2') !default;
-$slider-indicator-color: color('green', 'base') !default;
+$slider-bg-color: color("grey", "base") !default;
+$slider-bg-color-light: color("grey", "lighten-2") !default;
+$slider-indicator-color: color("green", "base") !default;
 
 // 16. Spinners | Loaders
 // ==========================================================================

@@ -16,11 +16,6 @@ class ComposerStaticInit4c87565f3f6f1515d36ad8ca8073c5c9
         array (
             'TPC\\voxels\\' => 11,
         ),
-        'P' => 
-        array (
-            'PostTypes\\PostType\\' => 19,
-            'PostTypes\\' => 10,
-        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -35,14 +30,6 @@ class ComposerStaticInit4c87565f3f6f1515d36ad8ca8073c5c9
         'TPC\\voxels\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes',
-        ),
-        'PostTypes\\PostType\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/includes',
-        ),
-        'PostTypes\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jjgrainger/posttypes/src',
         ),
     );
 

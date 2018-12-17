@@ -1,6 +1,6 @@
 module.exports = {
 	host: '10.0.0.236',
-	proxy: 'http://k.pix',
+	proxy: 'http://bedrock.lndo.site',
 	port: 3000,
 	ui: {
 		port: 3001,
@@ -12,5 +12,5 @@ module.exports = {
 		scroll: true,
 		forms: true,
 	},
-	distPublicPath: '/wp-content/plugins/voxels/assets/',
+	distPublicPath: '/app/plugins/voxels/assets/',
 };

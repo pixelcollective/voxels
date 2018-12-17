@@ -1,8 +1,10 @@
 /**
- * BLOCK: header block
+ * BLOCK: call-to-action block
  *
  */
 import { BrowserLayoutIcon } from '../icons'
+import ButtonEdit from '../button/button-edit'
+import ButtonSave from '../button/button-save'
 import PanelButtonSettings from '../components/panel-button-settings'
 import PanelBackgroundSettings from '../components/panel-background-settings'
 
@@ -28,8 +30,8 @@ import {
 
 import classnames from 'classnames'
 
-registerBlockType('voxels/header', {
-  title: __('Header'),
+registerBlockType('voxels/call-to-action', {
+  title: __('Call to Action'),
   icon: BrowserLayoutIcon,
   category: 'common',
   keywords: [
@@ -53,6 +55,16 @@ registerBlockType('voxels/header', {
       selector: 'p',
       default: __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue tincidunt nisit ut pretium. Duis blandit, tortor et suscipit tincidunt, dolor metus mattis neque, ac varius magna nibh ac tortor.')
     },
+    buttonHidden: {
+      type: 'string',
+      default: '',
+    },
+    buttonURL: {
+      type: 'string',
+      source: 'attribute',
+      selector: '.voxels-button-inner',
+      attribute: 'href',
+    },
     titleColor: {
       type: 'string',
       default: '#ffffff',
@@ -61,9 +73,25 @@ registerBlockType('voxels/header', {
       type: 'string',
       default: '#ffffff',
     },
+    buttonText: {
+      source: 'html',
+      selector: '.voxels-button-inner',
+      default: __('Button')
+    },
+    buttonColor: {
+      type: 'string',
+    },
+    buttonTextColor: {
+      type: 'string',
+      default: '#ffffff',
+    },
     size: {
       type: 'string',
       default: 'normal',
+    },
+    cornerButtonRadius: {
+      type: 'number',
+      default: 4,
     },
     contentAlign: {
       type: 'string',
@@ -100,6 +128,12 @@ registerBlockType('voxels/header', {
     } = props
 
     const {
+      buttonURL,
+      buttonText,
+      buttonColor,
+      buttonTextColor,
+      cornerButtonRadius,
+      buttonHidden,
       size,
       title,
       titleColor,
@@ -115,7 +149,7 @@ registerBlockType('voxels/header', {
 
     const mainClasses = classnames([
       className,
-      'voxels-header',
+      'voxels-call-to-action',
       'voxels-has-background-opacity-' + (1 * Math.round(backgroundOpacity / 1)),
     ], {
         'voxels-has-background': backgroundColor || backgroundImageURL,
@@ -169,12 +203,25 @@ registerBlockType('voxels/header', {
             onChangeBackgroundOpacity={backgroundOpacity => setAttributes({ backgroundOpacity })}
             onChangeFixedBackground={value => setAttributes({ fixedBackground: !!value })}
           />
+          <PanelButtonSettings
+            initialOpen={false}
+            buttonColor={buttonColor}
+            buttonTextColor={buttonTextColor}
+            buttonSize={size}
+            buttonHidden={buttonHidden}
+            buttonBorderRadius={cornerButtonRadius}
+            onChangeButtonHidden={buttonHidden => setAttributes({ buttonHidden }) }
+            onChangeButtonColor={(value) => setAttributes({ buttonColor: value })}
+            onChangeButtonTextColor={(value) => setAttributes({ buttonTextColor: value })}
+            onChangeButtonSize={(value) => { setAttributes({ size: value }) }}
+            onChangeButtonBorderRadius={(value) => setAttributes({ cornerButtonRadius: value })}
+          />
         </InspectorControls>
         <div className={mainClasses} style={mainStyle}>
-          <div className='voxels-header-wrapper'>
+          <div className='voxels-call-to-action-wrapper'>
             <RichText
               tagName='h2'
-              className='voxels-header-title'
+              className='voxels-call-to-action-title'
               placeholder={title.default}
               value={title}
               onChange={(value) => setAttributes({ title: value })}
@@ -185,7 +232,7 @@ registerBlockType('voxels/header', {
             />
             <RichText
               tagName='p'
-              className='voxels-header-subtitle'
+              className='voxels-call-to-action-subtitle'
               placeholder={subtitle.default}
               value={subtitle}
               onChange={(value) => setAttributes({ subtitle: value })}
@@ -194,8 +241,31 @@ registerBlockType('voxels/header', {
                 color: subtitleColor
               }}
             />
+            {!buttonHidden && (
+            <ButtonEdit hidden={buttonHidden} size={size} align={contentAlign} color={buttonTextColor} backgroundColor={buttonColor} text={buttonText} borderRadius={cornerButtonRadius}
+              onChange={(text) => setAttributes({ buttonText: text })}
+            />
+            )}
           </div>
         </div>
+        {isSelected && !buttonHidden && (
+          <form
+            key={'form-link'}
+            onSubmit={(event) => event.preventDefault()}
+            className={`blocks-button__inline-link voxels-button-${contentAlign}`}
+          >
+            <Dashicon icon={'admin-links'} />
+            <URLInput
+              value={buttonURL}
+              onChange={(value) => setAttributes({ buttonURL: value })}
+            />
+            <IconButton
+              icon={'editor-break'}
+              label={__('Apply')}
+              type={'submit'}
+            />
+          </form>
+        )}
       </Fragment>
     );
   },
@@ -203,6 +273,12 @@ registerBlockType('voxels/header', {
   save: function (props) {
     const { className } = props
     const {
+      buttonURL,
+      buttonText,
+      buttonColor,
+      buttonHidden,
+      buttonTextColor,
+      cornerButtonRadius,
       size,
       title,
       titleColor,
@@ -217,7 +293,7 @@ registerBlockType('voxels/header', {
 
     const mainClasses = classnames([
       className,
-      'voxels-header',
+      'voxels-call-to-action',
       'voxels-has-background-opacity-' + (1 * Math.round(backgroundOpacity / 1)),
     ], {
         'voxels-has-background': backgroundColor || backgroundImageURL,
@@ -234,11 +310,11 @@ registerBlockType('voxels/header', {
 
     return (
       <div className={mainClasses} style={mainStyle}>
-        <div className='voxels-header-wrapper'>
+        <div className='voxels-call-to-action-wrapper'>
           {!RichText.isEmpty(title) && (
             <RichText.Content
               tagName='h2'
-              className='voxels-header-title'
+              className='voxels-call-to-action-title'
               style={{ color: titleColor }}
               value={title}
             />
@@ -246,10 +322,13 @@ registerBlockType('voxels/header', {
           {!RichText.isEmpty(subtitle) && (
             <RichText.Content
               tagName='p'
-              className='voxels-header-subtitle'
+              className='voxels-call-to-action-subtitle'
               style={{ color: subtitleColor }}
               value={subtitle}
             />
+          )}
+          {buttonText && !!buttonText.length && !buttonHidden && (
+            <ButtonSave hidden={buttonHidden} size={size} url={buttonURL} align={contentAlign} color={buttonTextColor} text={buttonText} backgroundColor={buttonColor} borderRadius={cornerButtonRadius} />
           )}
         </div>
       </div>

@@ -3,7 +3,7 @@
  * voxels
  * 
  * @author Tiny Pixel Collective, Kelly Mears
- * @version 0.1.0
+ * @version 0.0.1
  * @link https://tinypixel.io/voxels
  * @license MIT
  * 

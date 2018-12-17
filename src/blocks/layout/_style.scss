@@ -1,0 +1,12 @@
+.voxels__grid_row {
+  display: inline-block;
+  width: 100%;
+
+  :after {
+    clear: both;
+  }
+}
+
+.voxels__content-area { width: 60%; float: left; }
+
+.voxels__aside-area { width: 35%; float: left; }
