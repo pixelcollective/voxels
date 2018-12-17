@@ -1,10 +1,10 @@
 {
-  "editor.css": "blocks/editor-22fdb9d8.css",
-  "editor.css.map": "blocks/editor-22fdb9d8.css.map",
+  "editor.css": "blocks/editor-808650e8.css",
+  "editor.css.map": "blocks/editor-808650e8.css.map",
   "editor.js": "editor.js",
   "editor.js.map": "editor.js.map",
-  "public.css": "blocks/public-d3d8bb51.css",
-  "public.css.map": "blocks/public-d3d8bb51.css.map",
+  "public.css": "blocks/public-8567fbd1.css",
+  "public.css.map": "blocks/public-8567fbd1.css.map",
   "public.js": "public.js",
   "public.js.map": "public.js.map",
   "runtime.js": "runtime.js",
@@ -20,10 +20,10 @@
         "editor.js.map"
       ],
       "css": [
-        "blocks/editor-22fdb9d8.css"
+        "blocks/editor-808650e8.css"
       ],
       "css.map": [
-        "blocks/editor-22fdb9d8.css.map"
+        "blocks/editor-808650e8.css.map"
       ]
     },
     "public": {
@@ -36,10 +36,10 @@
         "public.js.map"
       ],
       "css": [
-        "blocks/public-d3d8bb51.css"
+        "blocks/public-8567fbd1.css"
       ],
       "css.map": [
-        "blocks/public-d3d8bb51.css.map"
+        "blocks/public-8567fbd1.css.map"
       ]
     }
   }
