@@ -1,11 +1,11 @@
 /**
  * Background/boxed styles
  */
-.voxels-has-background {
+.wp-block-voxels-has-background {
   @include box();
 }
 
-.voxels-has-background-image {
+.wp-block-voxels-has-background-image {
   position: relative;
   background-size: cover;
   background-position: center;
@@ -28,14 +28,14 @@
   }
 }
 
-.alignfull.voxels-has-background {
+.alignfull.wp-block-voxels-has-background {
   border-radius: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 
 @for $i from 0 through 10 {
-  .voxels-has-background-opacity-#{ $i }::before {
+  .wp-block-voxels-has-background-opacity-#{ $i }::before {
     opacity: $i * 0.1;
   }
 }

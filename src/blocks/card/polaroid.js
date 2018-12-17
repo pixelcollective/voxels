@@ -56,7 +56,7 @@ export const edit = (props) => {
 
   const mainClasses = classnames([
     className,
-    'voxels-card',
+    '.wp-block-voxels-card',
   ])
 
   return (
@@ -100,7 +100,7 @@ export const edit = (props) => {
       </InspectorControls>
       <div className={mainClasses}>
         <ImageUploadPlaceholder
-          className='voxels-card-image-container'
+          className='.wp-block-voxels-card-image-container'
           imageID={mediaID}
           imageURL={mediaURL}
           onRemove={() => { setAttributes({ mediaURL: '', mediaID: '' }) }}
@@ -109,7 +109,7 @@ export const edit = (props) => {
         <RichText
           tagName={'h4'}
           value={heading}
-          className={'voxels-card-heading'}
+          className={'.wp-block-voxels-card-heading'}
           onChange={(text) => setAttributes({ heading: text })}
           style={{
             color: headingColor,
@@ -120,7 +120,7 @@ export const edit = (props) => {
         <RichText
           tagName={'p'}
           value={des}
-          className={'voxels-card-des'}
+          className={'.wp-block-voxels-card-des'}
           onChange={(text) => setAttributes({ des: text })}
           style={{
             color: desColor,
@@ -177,7 +177,7 @@ export const save = (props) => {
 
   const mainClasses = classnames([
     className,
-    'voxels-card',
+    '.wp-block-voxels-card',
   ], {
       'has-image': mediaURL,
     })
@@ -195,7 +195,7 @@ export const save = (props) => {
       {!RichText.isEmpty(des) && (
         <RichText.Content
           tagName="p"
-          className='voxels-card-des'
+          className='.wp-block-voxels-card-des'
           style={{ color: desColor, textAlign: contentAlign }}
           value={des}
         />
@@ -209,64 +209,66 @@ export const save = (props) => {
 
 const schema = {
   mediaID: {
-    type: 'number',
+    type: "number"
   },
   mediaURL: {
-    type: 'string',
-    source: 'attribute',
-    selector: '.voxels-card-image-container',
-    attribute: 'data-src',
+    type: "string",
+    source: "attribute",
+    selector: ".wp-block-voxels-card-image-container",
+    attribute: "data-src"
   },
   heading: {
-    source: 'html',
-    selector: '.voxels-card h4',
-    default: __('Your Headline Here')
+    source: "html",
+    selector: ".wp-block-voxels-card h4",
+    default: __("Your Headline Here")
   },
   des: {
-    source: 'html',
-    selector: '.voxels-card-des',
-    default: __('Spectrum designator equarium dignity. Forensia tonne palor, a quastridian nun.')
+    source: "html",
+    selector: ".wp-block-voxels-card-des",
+    default: __(
+      "Spectrum designator equarium dignity. Forensia tonne palor, a quastridian nun."
+    )
   },
   headingColor: {
-    type: 'string',
+    type: "string"
   },
   desColor: {
-    type: 'string',
+    type: "string"
   },
   buttonURL: {
-    type: 'string',
-    source: 'attribute',
-    selector: '.voxels-button-inner',
-    attribute: 'href',
+    type: "string",
+    source: "attribute",
+    selector: ".wp-block-voxels-button-inner",
+    attribute: "href"
   },
   buttonText: {
-    source: 'html',
-    selector: '.voxels-button-inner',
-    default: __('Button')
+    source: "html",
+    selector: ".wp-block-voxels-button-inner",
+    default: __("Button")
   },
   buttonHidden: {
-    type: 'string',
+    type: "string"
   },
   buttonColor: {
-    type: 'string',
+    type: "string"
   },
   buttonTextColor: {
-    type: 'string',
-    default: '#ffffff',
+    type: "string",
+    default: "#ffffff"
   },
   size: {
-    type: 'string',
-    default: 'normal',
+    type: "string",
+    default: "normal"
   },
   cornerButtonRadius: {
-    type: 'number',
-    default: 4,
+    type: "number",
+    default: 4
   },
   contentAlign: {
-    type: 'string',
-    default: 'left',
-  },
-}
+    type: "string",
+    default: "left"
+  }
+};
 
 /**
  * Register: Gutenberg Block.

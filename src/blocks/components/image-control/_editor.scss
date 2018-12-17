@@ -1,5 +1,5 @@
-.voxels-image-control {
-  .voxels-placeholder {
+.wp-block-voxels-image-control {
+  .wp-block-voxels-placeholder {
     height: 150px;
     display: flex;
     justify-content: center;
@@ -14,13 +14,13 @@
     }
   }
 
-  .voxels-placeholder,
-  .voxels-image-preview {
+  .wp-block-voxels-placeholder,
+  .wp-block-voxels-image-preview {
     border-radius: 4px;
     cursor: pointer;
   }
 
-  .voxels-image-preview-wrapper {
+  .wp-block-voxels-image-preview-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
@@ -36,13 +36,13 @@
     }
   }
 
-  .voxels-image-preview {
+  .wp-block-voxels-image-preview {
     min-width: 100px;
     flex: 1 1 100px;
     margin: 0;
   }
 
-  .voxels-image-preview-remove {
+  .wp-block-voxels-image-preview-remove {
     background: none !important;
     color: #ddd;
     border: none;
