@@ -17,19 +17,12 @@ import {
 	__,
 	InspectorControls,
 	BlockControls,
-	AlignmentToolbar,
 	BlockAlignmentToolbar,
-	PanelColorSettings,
 	Dashicon,
 	IconButton,
-	SelectControl,
-	RangeControl,
 	URLInput,
-	PanelBody,
 	applyFilters,
 	Fragment,
-	omit,
-	merge,
 } from './../wp_imports'
 
 export const edit = ( props ) => {
@@ -40,7 +33,7 @@ export const edit = ( props ) => {
 
 	const mainClasses = classnames( [
 		className,
-		'voxels-button',
+		'wp-blocks-voxels-button',
 	] )
 
 	const defaultEditDesign = (
@@ -105,7 +98,7 @@ export const save = ( props ) => {
 
 	const mainClasses = classnames( [
 		className,
-		'voxels-button',
+		'wp-blocks-voxels-button',
 	] )
 
 	const saved = <ButtonSave hidden={buttonHidden} className={ mainClasses } align={ align } size={ size } url={ url } color={ textColor } text={ text } backgroundColor={ color } borderRadius={ cornerButtonRadius } />;
@@ -172,7 +165,6 @@ registerBlockType( 'voxels/button', {
 	category: 'common',
 	keywords: [
 		__( 'Button' ),
-		__( 'tinyPixel' ),
 	],
 	attributes: schema,
 	edit,

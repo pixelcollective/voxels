@@ -1,8 +1,8 @@
-.voxels-image-upload-placeholder {
+.wp-block-voxels-image-upload-placeholder {
   cursor: copy;
 }
 
-.voxels-image-upload-has-placeholder {
+.wp-block-voxels-image-upload-has-placeholder {
   background: #f1f1f1;
   display: flex;
   justify-content: center;
@@ -22,13 +22,13 @@
   }
 }
 
-.voxels-image-upload-has-image {
+.wp-block-voxels-image-upload-has-image {
   &:hover {
     opacity: 0.8;
   }
 }
 
-.voxels-image-upload-remove {
+.wp-block-voxels-image-upload-remove {
   cursor: not-allowed;
   background: none !important;
   color: #ddd;
@@ -50,7 +50,7 @@
 .editor-block-list__block {
   &.is-selected,
   &.is-hovered {
-    .voxels-image-upload-remove {
+    .wp-block-voxels-image-upload-remove {
       display: block;
     }
   }

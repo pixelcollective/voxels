@@ -32,8 +32,6 @@ export const edit = (props) => {
 
   const {
     isSelected,
-    editable,
-    setState,
     className,
     setAttributes
   } = props;
@@ -57,7 +55,7 @@ export const edit = (props) => {
 
   const mainClasses = classnames([
     className,
-    'voxels-card-horizontal-container voxels-card-horizontal',
+    'wp-block-voxels-card-horizontal-container voxels-card-horizontal',
   ])
 
   return (
@@ -101,7 +99,7 @@ export const edit = (props) => {
       </InspectorControls>
       <div className={mainClasses}>
         <ImageUploadPlaceholder
-          className='voxels-card-horizontal-image'
+          className='wp-block-voxels-card-horizontal-image'
           imageID={mediaID}
           imageURL={mediaURL}
           onRemove={() => { setAttributes({ mediaURL: '', mediaID: '' }) }}
@@ -112,7 +110,7 @@ export const edit = (props) => {
             <RichText
               tagName={'h4'}
               value={heading}
-              className={'voxels-card-horizontal-title'}
+              className={'wp-block-voxels-card-horizontal-title'}
               onChange={(text) => setAttributes({ heading: text })}
               style={{
                 color: headingColor,
@@ -123,7 +121,7 @@ export const edit = (props) => {
             <RichText
               tagName={'p'}
               value={des}
-              className={'voxels-card-horizontal-description'}
+              className={'wp-block-voxels-card-horizontal-description'}
               onChange={(text) => setAttributes({ des: text })}
               style={{
                 color: desColor,
@@ -170,9 +168,7 @@ export const save = (props) => {
     heading,
     des,
     mediaURL,
-    mediaID,
     headingColor,
-    taglineColor,
     buttonHidden,
     desColor,
     buttonURL,
@@ -186,7 +182,7 @@ export const save = (props) => {
 
   const mainClasses = classnames([
     className,
-    'voxels-card-horizontal-container voxels-card-horizontal',
+    'wp-block-voxels-card-horizontal-container voxels-card-horizontal',
   ])
 
   return (
@@ -205,7 +201,7 @@ export const save = (props) => {
           {!RichText.isEmpty(des) && (
             <RichText.Content
               tagName="p"
-              className='voxels-card-horizontal-description'
+              className='wp-block-voxels-card-horizontal-description'
               style={{ color: desColor, textAlign: contentAlign }}
               value={des}
             />
@@ -228,17 +224,17 @@ const schema = {
   mediaURL: {
     type: 'string',
     source: 'attribute',
-    selector: '.voxels-card-horizontal-image',
+    selector: '.wp-block-voxels-card-horizontal-image',
     attribute: 'data-src',
   },
   heading: {
     source: 'html',
-    selector: '.voxels-card-horizontal h4',
+    selector: '.wp-block-voxels-card-horizontal h4',
     default: __('Your Headline Here')
   },
   des: {
     source: 'html',
-    selector: '.voxels-card-horizontal-description',
+    selector: '.wp-block-voxels-card-horizontal-description',
     default: __('The Headline concept and buttressing tagline are followed by a brief description. Remember to set an image and BAM! You\'ve got yourself a card 👏🏽')
   },
   headingColor: {
@@ -250,7 +246,7 @@ const schema = {
   buttonURL: {
     type: 'string',
     source: 'attribute',
-    selector: '.voxels-button-inner',
+    selector: '.wp-block-voxels-button-inner',
     attribute: 'href',
   },
   buttonHidden: {
@@ -258,7 +254,7 @@ const schema = {
   },
   buttonText: {
     source: 'html',
-    selector: '.voxels-button-inner',
+    selector: '.wp-block-voxels-button-inner',
     default: __('Button')
   },
   buttonColor: {
@@ -301,7 +297,6 @@ registerBlockType('voxels/horizontal', {
   keywords: [
     __('voxels'),
     __('Card'),
-    __('horizontal'),
   ],
   attributes: schema,
   edit,

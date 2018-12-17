@@ -3,7 +3,7 @@
  *
  * CSS for both Frontend+Backend.
  */
-.voxels-button {
+.wp-block-voxels-button {
   @include baseButton();
 
   border: none;
@@ -11,7 +11,7 @@
   box-shadow: none !important;
   cursor: pointer;
 
-  .voxels-button-inner {
+  .wp-block-voxels-button-inner {
     font-family: $family-sans-serif;
     text-decoration: none !important;
     white-space: nowrap;
@@ -33,49 +33,49 @@
   }
 }
 
-.voxels-button .voxels-button-inner:hover {
+.wp-block-voxels-button .wp-block-voxels-button-inner:hover {
   color: white;
 }
 
-.voxels-button-small.voxels-button .voxels-button-inner {
+.wp-block-voxels-button-small.wp-block-voxels-button .wp-block-voxels-button-inner {
   font-size: 0.75em;
 }
 
-.voxels-button-medium.voxels-button {
+.wp-block-voxels-button-medium.wp-block-voxels-button {
   padding-left: 1.25em;
   padding-right: 1.25em;
 
-  .voxels-button-inner {
+  .wp-block-voxels-button-inner {
     font-size: 1.25em;
   }
 }
 
-.voxels-button-large.voxels-button {
+.wp-block-voxels-button-large.wp-block-voxels-button {
   padding-left: 1.5em;
   padding-right: 1.5em;
 
-  .voxels-button-inner {
+  .wp-block-voxels-button-inner {
     font-size: 1.5em;
   }
 }
 
-.voxels-button-left {
+.wp-block-voxels-button-left {
   margin-right: auto;
   display: table;
 }
 
-.voxels-button-center {
+.wp-block-voxels-button-center {
   margin-left: auto;
   margin-right: auto;
   display: table;
 }
 
-.voxels-button-right {
+.wp-block-voxels-button-right {
   margin-left: auto;
   display: table;
 }
 
-.voxels-button-full {
+.wp-block-voxels-button-full {
   display: block;
   text-align: center;
 }

@@ -1,18 +1,18 @@
-.voxels-card *,
-.voxels-card-horizontal *,
-.voxels-polaroid * p,
+.wp-block-voxels-card *,
+.wp-block-voxels-card-horizontal *,
+.wp-block-voxels-polaroid * p,
 ul li,
 ol li {
 }
 
-.voxels-card-horizontal-panel {
+.wp-block-voxels-card-horizontal-panel {
   transition: box-shadow 0.25s;
   padding: $voxels-card-horizontal-padding;
   border-radius: 2px;
   background-color: $voxels-card-horizontal-bg-color;
 }
 
-.voxels-card-horizontal {
+.wp-block-voxels-card-horizontal {
   @include voxels-z-depth-2();
   @include baseBlock();
 
@@ -25,7 +25,7 @@ ol li {
   max-height: 100%;
   overflow: hidden;
 
-  .voxels-card-horizontal-content {
+  .wp-block-voxels-card-horizontal-content {
     padding: $voxels-card-horizontal-padding;
     border-radius: 0 0 2px 2px;
 
@@ -33,7 +33,7 @@ ol li {
       margin: 0;
     }
 
-    .voxels-card-horizontal-title {
+    .wp-block-voxels-card-horizontal-title {
       display: block;
       line-height: 32px;
 
@@ -47,8 +47,8 @@ ol li {
     @include voxels-z-depth-1();
   }
 
-  .voxels-image-upload-has-placeholder,
-  .voxels-card-horizontal-image {
+  .wp-block-voxels-image-upload-has-placeholder,
+  .wp-block-voxels-card-horizontal-image {
     min-height: 100%;
     max-height: none;
     background-size: cover;
@@ -59,11 +59,11 @@ ol li {
     margin-bottom: 0;
   }
 
-  .voxels-card-horizontal-image + .voxels-card-horizontal-content {
+  .wp-block-voxels-card-horizontal-image + .wp-block-voxels-card-horizontal-content {
     max-height: 40%;
   }
 
-  .voxels-card-horizontal-action {
+  .wp-block-voxels-card-horizontal-action {
     background-color: inherit; // Use inherit to inherit color classes
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 16px $voxels-card-horizontal-padding;
@@ -78,13 +78,13 @@ ol li {
       }
     }
 
-    .voxels-button {
+    .wp-block-voxels-button {
       margin-top: 0;
       margin-bottom: 0;
     }
   }
 
-  .voxels-card-horizontal-reveal {
+  .wp-block-voxels-card-horizontal-reveal {
     padding: $voxels-card-horizontal-padding;
     position: absolute;
     background-color: $voxels-card-horizontal-bg-color;
@@ -96,13 +96,13 @@ ol li {
     z-index: 3;
     display: none;
 
-    .voxels-card-horizontal-title {
+    .wp-block-voxels-card-horizontal-title {
       cursor: pointer;
       display: block;
     }
   }
 
-  .voxels-card-horizontal-image {
+  .wp-block-voxels-card-horizontal-image {
     min-height: 100%;
     max-height: none;
     background-size: cover;
@@ -112,7 +112,7 @@ ol li {
     background-position: center center;
     margin-bottom: 0!important;
 
-    .voxels-card-horizontal-title {
+    .wp-block-voxels-card-horizontal-title {
       color: $voxels-card-horizontal-bg-color;
       position: absolute;
       bottom: 0;
@@ -126,30 +126,30 @@ ol li {
     }
   }
 
-  .voxels-card-horizontal-stacked {
+  .wp-block-voxels-card-horizontal-stacked {
     display: flex;
     flex-direction: column;
     flex: 1;
     position: relative;
 
-    .voxels-card-horizontal-content {
+    .wp-block-voxels-card-horizontal-content {
       flex-grow: 1;
     }
   }
 
   &.sticky-action {
-    .voxels-card-horizontal-action {
+    .wp-block-voxels-card-horizontal-action {
       z-index: 2;
     }
 
-    .voxels-card-horizontal-reveal {
+    .wp-block-voxels-card-horizontal-reveal {
       z-index: 1;
       padding-bottom: 64px;
     }
   }
 }
 
-.voxels-card-horizontal-image .voxels-image-upload-remove {
+.wp-block-voxels-card-horizontal-image .wp-block-voxels-image-upload-remove {
   position: relative;
   left: 4px;
 }
