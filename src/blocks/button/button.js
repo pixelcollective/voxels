@@ -31,6 +31,7 @@ export const edit = ( props ) => {
 	const { url, text, color, textColor, buttonHidden, size, align, cornerButtonRadius } = props.attributes;
 
 	const mainClasses = classnames( [
+		'wp-block-voxels-button',
 		className,
 	] )
 

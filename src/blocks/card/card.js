@@ -196,7 +196,7 @@ const schema = {
   des: {
     source: 'html',
     selector: '.wp-block-voxels-card-des',
-    default: __('The Headline concept and buttressing tagline are followed by a brief description. Remember to set an image and BAM! You\'ve got yourself a card 👏🏽')
+    default: __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue tincidunt nisit ut pretium. Duis blandit, tortor et suscipit tincidunt, dolor metus mattis neque, ac varius magna nibh ac tortor...')
   },
   headingColor: {
     type: 'string',

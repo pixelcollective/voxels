@@ -117,8 +117,6 @@ registerBlockType('voxels/call-to-action', {
       className,
       setAttributes,
       isSelected,
-      editable,
-      setState
     } = props
 
     const {

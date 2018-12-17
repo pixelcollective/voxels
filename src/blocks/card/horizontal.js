@@ -99,7 +99,7 @@ export const edit = (props) => {
       </InspectorControls>
       <div className={mainClasses}>
         <ImageUploadPlaceholder
-          className='wp-block-voxels-card-horizontal-image'
+          className='wp-block-voxels-card-horizontal-image wp-block-voxels-card-image-container'
           imageID={mediaID}
           imageURL={mediaURL}
           onRemove={() => { setAttributes({ mediaURL: '', mediaID: '' }) }}
@@ -232,7 +232,7 @@ const schema = {
   des: {
     source: 'html',
     selector: '.wp-block-voxels-card-horizontal-description',
-    default: __('The Headline concept and buttressing tagline are followed by a brief description. Remember to set an image and BAM! You\'ve got yourself a card 👏🏽')
+    default: __('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue tincidunt nisit ut pretium. Duis blandit, tortor et suscipit tincidunt, dolor metus mattis neque, ac varius magna nibh ac tortor...')
   },
   headingColor: {
     type: 'string',

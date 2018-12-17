@@ -3,11 +3,16 @@ import { RichText } from './../wp_imports'
 
 function ButtonSave( props ) {
     const {
-		className = '',
-        align = 'center',
-				size = 'normal',
-				hidden = '',
-        url = '', color, text, backgroundColor, borderRadius } = props
+			className = 'wp-block-voxels-button',
+      align = 'center',
+			size = 'normal',
+			hidden = '',
+			url = '',
+			color,
+			text,
+			backgroundColor = '#0095da',
+			borderRadius
+		} = props
 
 	const style = {
 		borderRadius: borderRadius + 'px',
@@ -16,6 +21,7 @@ function ButtonSave( props ) {
 
 	const mainClasses = classnames( [
 		className,
+		`wp-block-voxels-button`,
 		`wp-block-voxels-button-${align}`,
 		`wp-block-voxels-button-${size}`,
 	] )

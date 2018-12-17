@@ -11,7 +11,7 @@ function ButtonEdit( props ) {
         size = 'small',
         color,
         text = '',
-        backgroundColor,
+        backgroundColor = '#0095da',
         borderRadius = 4,
         isSelected = null,
         hidden = '',

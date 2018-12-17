@@ -168,9 +168,9 @@ $box-vert-padding: 60px;
   }
 }
 
-[class*="voxels-"] form[class*="-link"],
-form[class*="voxels-"][class*="-link"],
-[class*="voxels-"] + form[class*="-link"],
+[class*="wp-block-voxels-"] form[class*="-link"],
+form[class*="wp-block-voxels-"][class*="-link"],
+[class*="wp-block-voxels-"] + form[class*="-link"],
 [data-type^="voxels/"][data-align="full"] + [data-type^="voxels/"][data-align="full"] {
   display: flex;
   justify-content: center;
