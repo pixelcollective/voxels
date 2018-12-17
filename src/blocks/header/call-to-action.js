@@ -62,7 +62,7 @@ registerBlockType('voxels/call-to-action', {
     buttonURL: {
       type: 'string',
       source: 'attribute',
-      selector: '.voxels-button-inner',
+      selector: '.wp-block-voxels-button-inner',
       attribute: 'href',
     },
     titleColor: {
@@ -75,7 +75,7 @@ registerBlockType('voxels/call-to-action', {
     },
     buttonText: {
       source: 'html',
-      selector: '.voxels-button-inner',
+      selector: '.wp-block-voxels-button-inner',
       default: __('Button')
     },
     buttonColor: {
@@ -218,10 +218,10 @@ registerBlockType('voxels/call-to-action', {
           />
         </InspectorControls>
         <div className={mainClasses} style={mainStyle}>
-          <div className='voxels-call-to-action-wrapper'>
+          <div className='wp-block-voxels-call-to-action-wrapper'>
             <RichText
               tagName='h2'
-              className='voxels-call-to-action-title'
+              className='wp-block-voxels-call-to-action-title'
               placeholder={title.default}
               value={title}
               onChange={(value) => setAttributes({ title: value })}
@@ -232,7 +232,7 @@ registerBlockType('voxels/call-to-action', {
             />
             <RichText
               tagName='p'
-              className='voxels-call-to-action-subtitle'
+              className='wp-block-voxels-call-to-action-subtitle'
               placeholder={subtitle.default}
               value={subtitle}
               onChange={(value) => setAttributes({ subtitle: value })}
@@ -310,11 +310,11 @@ registerBlockType('voxels/call-to-action', {
 
     return (
       <div className={mainClasses} style={mainStyle}>
-        <div className='voxels-call-to-action-wrapper'>
+        <div className='wp-block-voxels-call-to-action-wrapper'>
           {!RichText.isEmpty(title) && (
             <RichText.Content
               tagName='h2'
-              className='voxels-call-to-action-title'
+              className='wp-block-voxels-call-to-action-title'
               style={{ color: titleColor }}
               value={title}
             />
@@ -322,7 +322,7 @@ registerBlockType('voxels/call-to-action', {
           {!RichText.isEmpty(subtitle) && (
             <RichText.Content
               tagName='p'
-              className='voxels-call-to-action-subtitle'
+              className='wp-block-voxels-call-to-action-subtitle'
               style={{ color: subtitleColor }}
               value={subtitle}
             />
